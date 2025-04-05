@@ -15,8 +15,13 @@ const HeroSection: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
-            You don't organize, vote, or talk like it's 2008, so why run your campaign like it is?
+            Build momentum.<br />
+            Shift narratives.<br />
+            Win <span className="italic gradient-text">big</span>.
           </h1>
+          <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
+            You don't organize, vote, or talk like it's 2008, so why run your campaign like it is?
+          </p>
           <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
             We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy built for how you drive change today.
           </p>

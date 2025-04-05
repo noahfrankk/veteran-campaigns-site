@@ -12,8 +12,8 @@ const CorporateClientsSection: React.FC = () => {
         }}></div>
       </div>
       
-      <div className="container-custom relative z-10 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-white">
+      <div className="container-custom relative z-10 flex flex-col md:flex-row justify-between items-center">
+        <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-0 text-white text-center md:text-left md:max-w-[60%]">
           For corporate clients, NGOs, and non-profits, visit our parent brand Veteran Media for more.
         </h2>
         
@@ -22,9 +22,9 @@ const CorporateClientsSection: React.FC = () => {
           target="_blank" 
           rel="noopener noreferrer"
           className="inline-block bg-white text-primary-dark-blue py-2 px-6 rounded-md font-semibold hover:bg-white/90 transition-colors shadow-sm"
-          aria-label="Visit Veteran Media website"
+          aria-label="Learn more about Veteran Media"
         >
-          Veteran Media
+          Learn more
         </a>
       </div>
     </section>

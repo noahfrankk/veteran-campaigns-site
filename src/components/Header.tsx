@@ -43,7 +43,7 @@ const Header = () => {
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center space-x-6">
         <Link to="/past-work" className="text-[#3c3c3c] hover:text-primary-dark-blue">
-          Past Work
+          Case Studies
         </Link>
         <Button
           onClick={scrollToContact}
@@ -76,7 +76,7 @@ const Header = () => {
             className="text-[#3c3c3c] hover:text-primary-dark-blue"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Past Work
+            Case Studies
           </Link>
           <button 
             onClick={scrollToContact}
