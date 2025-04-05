@@ -1,5 +1,6 @@
 
 import React from "react";
+import HeroImageSlider from "./HeroImageSlider";
 
 const HeroSection: React.FC = () => {
   const scrollToContact = () => {
@@ -10,31 +11,34 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 md:py-32 container-custom">
-      <div className="max-w-[700px]">
-        <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
-          Build momentum. Shift narratives. Win <em className="gradient-text italic">big</em>.
-        </h1>
-        <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
-          Veteran Campaigns connects causes to communities. We equip our clients with 
-          winning strategies, compelling messaging, and targeted constituent outreach: 
-          empowering campaigns, organizations, and advocates to drive meaningful change.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <button 
-            onClick={scrollToContact}
-            className="btn-primary shadow-subtle"
-            aria-label="Get in touch with Veteran Campaigns"
-          >
-            Get In Touch
-          </button>
-          <a 
-            href="/past-work" 
-            className="btn-secondary text-center"
-            aria-label="View our case studies"
-          >
-            Case Studies
-          </a>
+    <section className="py-24 md:py-36 container-custom">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
+            You don't organize, vote, or talk like it's 2008, so why run your campaign like it is?
+          </h1>
+          <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
+            We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy built for how you drive change today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button 
+              onClick={scrollToContact}
+              className="btn-primary shadow-subtle"
+              aria-label="Get in touch with Veteran Campaigns"
+            >
+              Get In Touch
+            </button>
+            <a 
+              href="/past-work" 
+              className="btn-secondary text-center"
+              aria-label="View our case studies"
+            >
+              Case Studies
+            </a>
+          </div>
+        </div>
+        <div className="flex justify-center lg:justify-end">
+          <HeroImageSlider />
         </div>
       </div>
     </section>

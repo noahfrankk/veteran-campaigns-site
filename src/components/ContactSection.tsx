@@ -58,10 +58,10 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 container-custom scroll-mt-20">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">
-          How can we help?
+          Are you a campaign? An advocate? A changemaker?
         </h2>
         <p className="text-center text-lg mb-8">
-          Let's get to work. Send us a brief note and a member of our team will be in touch.
+          Let us know what you need.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">

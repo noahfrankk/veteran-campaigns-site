@@ -15,6 +15,14 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`sticky top-0 z-50 w-full h-16 px-8 flex items-center justify-between bg-white transition-shadow duration-300 ${
@@ -23,9 +31,11 @@ const Header = () => {
     >
       <div className="flex items-center">
         <Link to="/" className="flex items-center hover:no-underline">
-          <div className="w-10 h-10 bg-primary-dark-blue rounded-md flex items-center justify-center text-white font-bold mr-3">
-            VC
-          </div>
+          <img 
+            src="/lovable-uploads/60476027-84ab-412e-8147-04c0e852c0c1.png" 
+            alt="Veteran Campaigns Logo" 
+            className="h-10 w-auto mr-3"
+          />
           <span className="font-semibold text-black text-lg">Veteran Campaigns</span>
         </Link>
       </div>
@@ -35,16 +45,11 @@ const Header = () => {
         <Link to="/past-work" className="text-[#3c3c3c] hover:text-primary-dark-blue">
           Past Work
         </Link>
-        <Link to="/past-work#clients" className="text-[#3c3c3c] hover:text-primary-dark-blue">
-          Clients
-        </Link>
-        <a href="#contact" className="text-[#3c3c3c] hover:text-primary-dark-blue">
-          Contact
-        </a>
         <Button
+          onClick={scrollToContact}
           className="bg-primary-cyan-blue hover:bg-primary-cyan-blue/90 text-white h-9 px-4"
         >
-          Sign In
+          Contact
         </Button>
       </nav>
 
@@ -73,25 +78,12 @@ const Header = () => {
           >
             Past Work
           </Link>
-          <Link 
-            to="/past-work#clients" 
-            className="text-[#3c3c3c] hover:text-primary-dark-blue"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Clients
-          </Link>
-          <a 
-            href="#contact" 
-            className="text-[#3c3c3c] hover:text-primary-dark-blue"
-            onClick={() => setMobileMenuOpen(false)}
+          <button 
+            onClick={scrollToContact}
+            className="bg-primary-cyan-blue text-white py-2 px-4 rounded-md font-semibold hover:bg-primary-cyan-blue/90 transition-colors w-full text-center"
           >
             Contact
-          </a>
-          <Button
-            className="bg-primary-cyan-blue hover:bg-primary-cyan-blue/90 text-white w-full"
-          >
-            Sign In
-          </Button>
+          </button>
         </div>
       )}
     </header>

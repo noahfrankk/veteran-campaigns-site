@@ -5,8 +5,8 @@ import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
 import MessagingSection from "@/components/MessagingSection";
 import MarqueeSection from "@/components/MarqueeSection";
-import CtaBlock from "@/components/CtaBlock";
 import ContactSection from "@/components/ContactSection";
+import CorporateClientsSection from "@/components/CorporateClientsSection";
 import Footer from "@/components/Footer";
 
 const Index: React.FC = () => {
@@ -18,8 +18,8 @@ const Index: React.FC = () => {
         <VideoSection />
         <MessagingSection />
         <MarqueeSection />
-        <CtaBlock />
         <ContactSection />
+        <CorporateClientsSection />
       </main>
       <Footer />
     </div>
