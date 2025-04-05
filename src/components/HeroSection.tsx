@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
             Win <span className="italic gradient-text">big</span><span className="italic gradient-text">.</span>
           </h1>
           <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
-            You don't organize, vote, or talk like it's 2008, so why follow a strategy like it is? We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy built for how you drive change today.
+            You don't organize, vote, or talk like it's 2008, so <i>why run a strategy like it is?</i> We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy built for how to drive change today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button 

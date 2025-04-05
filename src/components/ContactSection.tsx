@@ -58,7 +58,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 container-custom scroll-mt-20">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">
-          Are you a campaign? An advocate? A changemaker?
+          Are you a candidate? An advocate? A changemaker?
         </h2>
         <p className="text-center text-lg mb-10">
           You're just one step away: fill out this brief form and our team will be in touch.

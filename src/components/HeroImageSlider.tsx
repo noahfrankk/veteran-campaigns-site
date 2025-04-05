@@ -33,14 +33,13 @@ const HeroImageSlider: React.FC = () => {
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <div className="aspect-[4/3] relative rounded-lg overflow-hidden border border-gray-200 shadow-md">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1460ab]/10 to-[#10acdc]/10" />
+            <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
               <div className="p-1">
                 <div className="rounded-lg overflow-hidden aspect-[4/3] flex items-center justify-center">
                   <img 
                     src={image} 
                     alt={`Client Work ${index + 1}`} 
-                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-contain filter grayscale transition-all duration-300"
                   />
                 </div>
               </div>

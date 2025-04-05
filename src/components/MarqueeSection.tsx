@@ -33,7 +33,7 @@ const MarqueeSection: React.FC = () => {
             {clientLogos.map((logo, index) => (
               <div 
                 key={index} 
-                className="min-w-[200px] h-20 mx-4 bg-white shadow-subtle rounded-md flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-200"
+                className="min-w-[200px] h-20 mx-4 flex items-center justify-center"
               >
                 <img 
                   src={logo} 
@@ -46,7 +46,7 @@ const MarqueeSection: React.FC = () => {
             {clientLogos.map((logo, index) => (
               <div 
                 key={`duplicate-${index}`} 
-                className="min-w-[200px] h-20 mx-4 bg-white shadow-subtle rounded-md flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-200"
+                className="min-w-[200px] h-20 mx-4 flex items-center justify-center"
               >
                 <img 
                   src={logo} 
