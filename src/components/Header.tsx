@@ -34,7 +34,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/60476027-84ab-412e-8147-04c0e852c0c1.png" 
             alt="Veteran Campaigns Logo" 
-            className="h-10 w-auto mr-3"
+            className="h-10 w-auto mr-1.5"
           />
           <span className="font-semibold text-black text-lg">Veteran Campaigns</span>
         </Link>
