@@ -1,19 +1,30 @@
 
 import React from "react";
-import { Lightbulb, LineChart, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const VideoSection: React.FC = () => {
   return (
-    <section className="py-20 container-custom">
+    <section className="py-20 container-custom bg-gray-50">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="order-2 lg:order-1">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-            We help you get your messages where it matters most.
+            We get the word out, where it matters most.
           </h2>
           
           <p className="text-lg leading-relaxed mb-8">
-            Veteran Campaigns brings industry best practices to your grassroots causes. We've run for office ourselves—and we know what works. We built this firm to help define the future of campaign strategy.
+            Veteran Campaigns brings industry-grade strategy to grassroots causes. We've been on the other side—as candidates, campaign managers, and digital leads—so we know what it takes to build a movement, because we've lived it.
           </p>
+          
+          <p className="text-lg leading-relaxed mb-8">
+            We know how to win, and we've done it again and again for our clients. Let's build yours next.
+          </p>
+          
+          <Link 
+            to="/past-work" 
+            className="btn-secondary inline-block"
+          >
+            Past Clients
+          </Link>
         </div>
         
         <div className="order-1 lg:order-2">

@@ -57,14 +57,14 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20 container-custom scroll-mt-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">
           Are you a campaign? An advocate? A changemaker?
         </h2>
-        <p className="text-center text-lg mb-8">
-          Let us know what you need.
+        <p className="text-center text-lg mb-10">
+          You're just one step away: fill out this brief form and our team will be in touch.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 border-2 border-gray-200 rounded-xl p-8 shadow-md">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">
               Name

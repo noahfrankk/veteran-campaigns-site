@@ -12,16 +12,21 @@ const CorporateClientsSection: React.FC = () => {
         }}></div>
       </div>
       
-      <div className="container-custom relative z-10 text-center">
-        <h2 className="text-lg md:text-xl font-medium mb-6 text-white inline-block mx-auto">
-          For corporate clients, NGOs, and non-profits, visit our parent brand Veteran Media for more.
-        </h2>
+      <div className="container-custom relative z-10 text-center flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="text-left">
+          <h2 className="text-lg md:text-xl font-medium mb-2 text-white max-w-2xl">
+            For corporate clients, NGOs, and non-profits, visit our parent brand Veteran Media for more.
+          </h2>
+          <p className="text-sm text-white/80">
+            Questions? Send us a note at info@veteranmedia.com
+          </p>
+        </div>
         
         <a 
           href="https://www.veteranmedia.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-block ml-4 bg-white text-primary-dark-blue py-2 px-6 rounded-md font-semibold hover:bg-white/90 transition-colors shadow-sm"
+          className="inline-block bg-white text-primary-dark-blue py-3 px-8 rounded-md font-semibold hover:bg-white/90 transition-colors shadow-sm text-lg"
           aria-label="Learn more about Veteran Media"
         >
           Learn more

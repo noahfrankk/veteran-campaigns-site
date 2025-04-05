@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
             Build momentum.<br />
             Shift narratives.<br />
-            Win <span className="italic gradient-text">big</span>.
+            Win <span className="italic gradient-text">big</span><span className="italic gradient-text">.</span>
           </h1>
           <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
             You don't organize, vote, or talk like it's 2008, so why follow a strategy like it is? We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy built for how you drive change today.
@@ -25,14 +25,14 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button 
               onClick={scrollToContact}
-              className="btn-primary shadow-subtle"
+              className="btn-primary shadow-subtle w-full sm:w-auto sm:px-8"
               aria-label="Get in touch with Veteran Campaigns"
             >
               Get In Touch
             </button>
             <a 
               href="/past-work" 
-              className="btn-secondary text-center"
+              className="btn-secondary text-center w-full sm:w-auto"
               aria-label="View our case studies"
             >
               Case Studies

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Lightbulb, LineChart, Award } from "lucide-react";
+import { Target, Zap, BarChart } from "lucide-react";
 
 const StrategyBlock = ({ 
   title, 
@@ -24,27 +24,27 @@ const StrategyBlock = ({
 
 const MessagingSection: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container-custom">
         <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
-          Working with Veteran Campaigns
+          How we deliver for our clients
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StrategyBlock
-            title="Build momentum."
-            description="We craft campaigns that start strong and accelerate, building genuine community interest and involvement that translates into measurable results."
-            icon={Lightbulb}
+            title="Targeted Outreach"
+            description="We build tailored outreach strategies that meet each of your audiences where they are. Whether it's online, in their communities, or in their mailboxes, we focus your efforts where they'll make the biggest impact."
+            icon={Target}
           />
           <StrategyBlock
-            title="Shift narratives."
-            description="Our messaging strategies transform public perception, creating compelling stories that resonate with your audience and advance your cause."
-            icon={LineChart}
+            title="Campaign Innovation"
+            description="We don't recycle outdated tactics—we adapt to how people actually communicate today. That means staying ahead of trends, using the right tools for the right audiences, and helping you navigate an ever-changing landscape without losing focus."
+            icon={Zap}
           />
           <StrategyBlock
-            title="Win big."
-            description="We deliver campaigns designed for decisive victories, not just participation. Our strategies focus on meaningful outcomes that create lasting change."
-            icon={Award}
+            title="Strategy + Execution"
+            description="We do more than just build smart strategies: we help carry them out. From digital to mail, video to print, we execute on time and with your goals in mind. We've been candidates, managers, and organizers ourselves. That's why we show up like partners; we do what it takes to win."
+            icon={BarChart}
           />
         </div>
       </div>
