@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,25 +6,26 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
+    --foreground: 0 0% 24%;
     --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
+    --card-foreground: 0 0% 24%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 24 9.8% 10%;
-    --primary-foreground: 60 9.1% 97.8%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 20 14.3% 4.1%;
-    --radius: 0.5rem;
+    --popover-foreground: 0 0% 24%;
+    --primary-dark-blue: 210 77% 37%;
+    --primary-cyan-blue: 193 85% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 24%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 51%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 24%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 93%;
+    --input: 0 0% 93%;
+    --ring: 210 77% 37%;
+    --radius: 0.375rem;
   }
 }
 
@@ -32,15 +34,53 @@
     @apply border-border;
   }
   body {
-    @apply bg-surface text-primary antialiased;
+    @apply bg-white text-[#3c3c3c] antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-black;
+  }
+  a {
+    @apply transition-colors duration-200;
+  }
+  a:hover {
+    @apply underline;
   }
 }
 
-.glass {
-  @apply bg-white bg-opacity-10 backdrop-blur-lg border-2 border-white border-opacity-20;
+@layer components {
+  .container-custom {
+    @apply max-w-[1100px] mx-auto px-6;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-dark-blue to-primary-cyan-blue bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-cyan-blue text-white py-2 px-4 rounded-md font-semibold hover:bg-primary-cyan-blue/90 transition-colors shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply border border-primary-dark-blue text-primary-dark-blue py-2 px-4 rounded-md font-semibold hover:bg-primary-dark-blue/5 transition-colors;
+  }
 }
 
-.dot-pattern {
-  background-image: radial-gradient(circle at 1px 1px, #828179 2px, transparent 0);
-  background-size: 24px 24px;
+/* Custom animation for the marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

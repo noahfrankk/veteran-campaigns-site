@@ -25,12 +25,45 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: "#141413",
-        secondary: "#828179",
-        accent: "#C4C3BB",
-        muted: "#A3A299",
-        highlight: "#F2FF44",
-        surface: "#FAFAF8",
+        primary: {
+          DEFAULT: "#1460ab",
+          cyan: "#10acdc",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        "primary-dark-blue": "#1460ab",
+        "primary-cyan-blue": "#10acdc",
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'subtle': '0 2px 4px rgba(0, 0, 0, 0.08)',
       },
       keyframes: {
         "accordion-down": {
@@ -41,15 +74,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+        "marquee": {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
+        "marquee": "marquee 25s linear infinite",
       },
     },
   },

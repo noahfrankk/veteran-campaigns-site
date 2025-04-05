@@ -1,21 +1,26 @@
 
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Features from "../components/Features";
-import Stats from "../components/Stats";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
+import React from "react";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import VideoSection from "@/components/VideoSection";
+import MessagingSection from "@/components/MessagingSection";
+import MarqueeSection from "@/components/MarqueeSection";
+import CtaBlock from "@/components/CtaBlock";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-surface">
-      <Navbar />
-      <Hero />
-      <div className="max-w-[1200px] mx-auto px-6">
-        <Features />
-        <Stats />
-        <FAQ />
-      </div>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <HeroSection />
+        <VideoSection />
+        <MessagingSection />
+        <MarqueeSection />
+        <CtaBlock />
+        <ContactSection />
+      </main>
       <Footer />
     </div>
   );
