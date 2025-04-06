@@ -26,24 +26,17 @@ const HeroSection: React.FC = () => {
       
       {/* Container for content */}
       <div className="container-custom relative">
-        {/* Decorative gradient elements */}
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary-cyan-blue/30 to-primary-dark-blue/40 rounded-full blur-xl z-[1] transform translate-x-1/4 -translate-y-1/4"></div>
-        <div className="absolute top-20 right-32 w-[200px] h-[200px] bg-gradient-to-r from-primary-cyan-blue/40 to-primary-dark-blue/30 rounded-full blur-lg z-[1]"></div>
-        <div className="absolute top-40 right-64 w-[120px] h-[120px] bg-gradient-to-tl from-primary-cyan-blue/50 to-transparent rounded-full blur-md z-[1]"></div>
+        {/* Decorative gradient circles with reduced opacity and all as gradients */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary-cyan-blue/15 to-primary-dark-blue/20 rounded-full blur-xl z-[1] transform translate-x-1/4 -translate-y-1/4"></div>
+        <div className="absolute top-20 right-32 w-[200px] h-[200px] bg-gradient-to-r from-primary-cyan-blue/20 to-primary-dark-blue/15 rounded-full blur-lg z-[1]"></div>
+        <div className="absolute top-40 right-64 w-[120px] h-[120px] bg-gradient-to-tl from-primary-cyan-blue/25 to-transparent rounded-full blur-md z-[1]"></div>
         
-        {/* Additional blue gradient elements - Increased opacity */}
-        <div className="absolute top-20 left-0 w-[150px] h-[150px] bg-gradient-to-tr from-primary-dark-blue/20 to-primary-cyan-blue/30 rounded-full blur-lg z-[1]"></div>
-        <div className="absolute bottom-10 right-10 w-[180px] h-[180px] bg-gradient-to-bl from-primary-cyan-blue/25 to-primary-dark-blue/35 rounded-full blur-xl z-[1]"></div>
-        <div className="absolute bottom-40 left-64 w-[100px] h-[100px] bg-gradient-to-r from-primary-dark-blue/30 to-transparent rounded-full blur-md z-[1]"></div>
+        {/* Additional blue gradient elements with reduced opacity */}
+        <div className="absolute top-20 left-0 w-[150px] h-[150px] bg-gradient-to-tr from-primary-dark-blue/10 to-primary-cyan-blue/15 rounded-full blur-lg z-[1]"></div>
+        <div className="absolute bottom-10 right-10 w-[180px] h-[180px] bg-gradient-to-bl from-primary-cyan-blue/12.5 to-primary-dark-blue/17.5 rounded-full blur-xl z-[1]"></div>
+        <div className="absolute bottom-40 left-64 w-[100px] h-[100px] bg-gradient-to-r from-primary-dark-blue/15 to-transparent rounded-full blur-md z-[1]"></div>
         
-        {/* Megaphone graphic in top right - improved visibility and positioning */}
-        <div className="absolute top-[-150px] right-[-200px] w-[700px] h-[700px] transform -translate-x-1/4 translate-y-1/4 opacity-40 z-[1]">
-          <img 
-            src="/lovable-uploads/c4555be3-3fb4-49e2-b718-10ac4c70b5c0.png" 
-            alt="Megaphone graphic" 
-            className="w-full h-full object-contain"
-          />
-        </div>
+        {/* Removed megaphone graphic */}
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           <div>
@@ -73,8 +66,8 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center lg:justify-end relative z-20">
-            {/* Additional decorative element behind slider */}
-            <div className="absolute w-[200px] h-[200px] bg-gradient-to-br from-primary-dark-blue/20 to-primary-cyan-blue/30 rounded-full blur-lg -z-10 -bottom-10 -left-10"></div>
+            {/* Additional decorative gradient element behind slider */}
+            <div className="absolute w-[200px] h-[200px] bg-gradient-to-br from-primary-dark-blue/10 to-primary-cyan-blue/15 rounded-full blur-lg -z-10 -bottom-10 -left-10"></div>
             
             <HeroImageSlider />
           </div>
