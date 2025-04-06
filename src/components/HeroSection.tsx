@@ -17,6 +17,11 @@ const HeroSection: React.FC = () => {
       <div className="absolute top-20 right-32 w-[200px] h-[200px] bg-gradient-to-r from-primary-cyan-blue/30 to-primary-dark-blue/20 rounded-full blur-lg -z-10"></div>
       <div className="absolute top-40 right-64 w-[120px] h-[120px] bg-gradient-to-tl from-primary-cyan-blue/40 to-transparent rounded-full blur-md -z-10"></div>
       
+      {/* Additional blue gradient elements */}
+      <div className="absolute top-20 left-0 w-[150px] h-[150px] bg-gradient-to-tr from-primary-dark-blue/10 to-primary-cyan-blue/20 rounded-full blur-lg -z-10"></div>
+      <div className="absolute bottom-10 right-10 w-[180px] h-[180px] bg-gradient-to-bl from-primary-cyan-blue/15 to-primary-dark-blue/25 rounded-full blur-xl -z-10"></div>
+      <div className="absolute bottom-40 left-64 w-[100px] h-[100px] bg-gradient-to-r from-primary-dark-blue/20 to-transparent rounded-full blur-md -z-10"></div>
+      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
