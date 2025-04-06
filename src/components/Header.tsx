@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -35,7 +36,9 @@ const Header = () => {
             alt="Veteran Campaigns Logo" 
             className="h-10 w-auto"
           />
-          <span className="font-semibold text-black text-lg ml-1.5">Veteran Campaigns</span>
+          <span className="font-bold text-xl text-primary-dark-blue ml-2">
+            Veteran Campaigns
+          </span>
         </Link>
       </div>
 
