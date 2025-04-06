@@ -104,7 +104,8 @@ const PastWork: React.FC = () => {
       logo: "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png", 
       info: {
         name: "Nick Kapoor",
-        details: "Kapoor for State Representative, CT HD-112. Fairfield County."
+        details: "Kapoor for State Representative, CT HD-112. Fairfield County.",
+        highlight: "Special election"
       }
     },
     {
@@ -151,6 +152,13 @@ const PastWork: React.FC = () => {
       }
     },
   ];
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -208,22 +216,22 @@ const PastWork: React.FC = () => {
         <section className="py-20 bg-[#f5f5f5]">
           <div className="container-custom">
             <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-center">
-              What Our Clients Say
+              Your partner in communications strategy.
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Left Side: Details */}
               <div className="bg-white p-8 rounded-lg shadow-subtle">
-                <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+                <h3 className="text-xl font-semibold mb-4 gradient-text">Proven Results</h3>
                 <p className="mb-4">
                   Our clients have experienced measurable success across multiple 
                   campaign cycles, with improved voter engagement and higher conversion rates.
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>Targeted messaging strategies</li>
-                  <li>Data-driven outreach campaigns</li>
-                  <li>Compelling visual identities</li>
-                  <li>Community-focused engagement</li>
+                  <li className="font-semibold">Targeted messaging strategies</li>
+                  <li className="font-semibold">Data-driven outreach campaigns</li>
+                  <li className="font-semibold">Compelling visual identities</li>
+                  <li className="font-semibold">Community-focused engagement</li>
                 </ul>
               </div>
               
@@ -245,7 +253,7 @@ const PastWork: React.FC = () => {
                   
                   <div className="flex justify-end">
                     <div className="text-right">
-                      <p className="font-semibold">{testimonials[activeTestimonial].author}</p>
+                      <p className="font-semibold text-xl gradient-text">{testimonials[activeTestimonial].author}</p>
                       <p className="text-gray-600">{testimonials[activeTestimonial].position}</p>
                     </div>
                   </div>
@@ -265,6 +273,16 @@ const PastWork: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            
+            <div className="flex justify-center mt-10">
+              <button 
+                onClick={scrollToContact} 
+                className="btn-primary"
+                aria-label="Get started with Veteran Campaigns"
+              >
+                Get Started
+              </button>
             </div>
           </div>
         </section>
