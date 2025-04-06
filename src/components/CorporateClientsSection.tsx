@@ -17,9 +17,6 @@ const CorporateClientsSection: React.FC = () => {
           <h2 className="text-lg md:text-xl font-medium mb-2 text-white max-w-2xl">
             For corporate clients, NGOs, and non-profits, visit our parent brand Veteran Media for more.
           </h2>
-          <p className="text-sm text-white/80">
-            Questions? Send us a note at <strong>info@veteranmedia.com</strong>.
-          </p>
         </div>
         
         <a 
