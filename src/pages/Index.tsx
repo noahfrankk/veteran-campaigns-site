@@ -14,8 +14,8 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Veteran Campaigns | Political Campaign Strategy & Messaging Experts"
-        description="Veteran Campaigns helps candidates win elections with expert political campaign messaging, innovative design and modern digital-first strategy."
+        title="Veteran Campaigns | Campaign Strategy"
+        description="Veteran Campaigns connects causes to communities with sharp creative, targeted outreach, and digital-first strategy that drives change today."
         canonical="/"
         keywords="political campaign strategy, election messaging, campaign experts, digital campaign strategy, political messaging, win elections"
       />

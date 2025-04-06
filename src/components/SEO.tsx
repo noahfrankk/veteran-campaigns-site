@@ -14,7 +14,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title = "Veteran Campaigns",
   description = "Political campaign messaging and strategy experts",
-  image = "/lovable-uploads/d5fdb083-a0e3-450e-8b5a-c0af24829c92.png",
+  image = "/lovable-uploads/f7054911-fff7-4a56-9e4f-87833a35d6a3.png",
   canonical = "",
   type = "website",
   keywords = "political campaigns, campaign messaging, campaign strategy, election strategy"
