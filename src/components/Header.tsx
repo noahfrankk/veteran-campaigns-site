@@ -32,13 +32,10 @@ const Header = () => {
       <div className="flex items-center">
         <Link to="/" className="flex items-center hover:no-underline">
           <img 
-            src="/lovable-uploads/60476027-84ab-412e-8147-04c0e852c0c1.png" 
+            src="/lovable-uploads/d5fdb083-a0e3-450e-8b5a-c0af24829c92.png" 
             alt="Veteran Campaigns Logo" 
             className="h-10 w-auto"
           />
-          <span className="font-bold text-xl text-primary-dark-blue ml-2">
-            Veteran Campaigns
-          </span>
         </Link>
       </div>
 
