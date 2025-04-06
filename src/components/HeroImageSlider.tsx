@@ -27,7 +27,7 @@ const HeroImageSlider: React.FC = () => {
                   <img 
                     src={image} 
                     alt={`Campaign Example ${index + 1}`} 
-                    className="w-full h-full object-contain transition-all duration-300 scale-[1.75]"
+                    className="w-full h-full object-contain transition-all duration-300 scale-[1.4]" // Reduced from 1.75 to 1.4 (20% smaller)
                   />
                 </div>
               </div>
