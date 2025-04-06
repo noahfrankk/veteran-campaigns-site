@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               Veteran Campaigns is a division of Veteran Media, LLC.
             </p>
             
-            <div className="flex space-x-4">
+            <div className="flex justify-start space-x-6">
               <a 
                 href="https://linkedin.com/showcase/veteran-campaigns" 
                 target="_blank" 
