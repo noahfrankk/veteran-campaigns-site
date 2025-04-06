@@ -18,7 +18,7 @@ const CorporateClientsSection: React.FC = () => {
             For corporate clients, NGOs, and non-profits, visit our parent brand Veteran Media for more.
           </h2>
           <p className="text-sm text-white/80">
-            Questions? Send us a note at info@veteranmedia.com
+            Questions? Send us a note at <strong>info@veteranmedia.com</strong>.
           </p>
         </div>
         
