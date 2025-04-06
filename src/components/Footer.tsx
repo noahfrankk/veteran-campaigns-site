@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -101,7 +100,7 @@ const Footer: React.FC = () => {
                 <img 
                   src="/lovable-uploads/6c80a8be-de65-4d5c-afda-5b1fb7f28f41.png" 
                   alt="Bluesky" 
-                  className="w-5 h-5 brightness-[10] filter"
+                  className="w-5 h-5 brightness-[10] filter hover:brightness-[1.5] transition-all duration-300 ease-in-out"
                 />
               </a>
             </div>
