@@ -8,11 +8,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// Updated client work images with new uploads - removed the fourth image
+// Updated client work images with new uploads
 const images = [
-  "/lovable-uploads/daf939d5-adbc-44ca-831e-ae3a2083853f.png",
-  "/lovable-uploads/a47949c9-3ba7-4d0b-9b73-a5bb95c3deb5.png",
-  "/lovable-uploads/719bb9ec-500b-4f84-894c-16ba44a24261.png",
+  "/lovable-uploads/dcaf19f6-4ed3-40ca-893e-a21a708ca8b1.png",
+  "/lovable-uploads/1113947f-0110-44b6-b131-619a3e1e1a55.png",
+  "/lovable-uploads/9ae4af05-faf5-488c-98cc-215a0ae1dd8c.png",
 ];
 
 const HeroImageSlider: React.FC = () => {
@@ -23,10 +23,10 @@ const HeroImageSlider: React.FC = () => {
           <CarouselItem key={index}>
             <div className="aspect-square relative rounded-lg overflow-hidden">
               <div className="p-1">
-                <div className="rounded-lg overflow-hidden aspect-square bg-primary-cyan-blue/20 flex items-center justify-center p-4">
+                <div className="rounded-lg overflow-hidden aspect-square flex items-center justify-center p-4">
                   <img 
                     src={image} 
-                    alt={`Client Work ${index + 1}`} 
+                    alt={`Campaign Example ${index + 1}`} 
                     className="w-full h-full object-contain transition-all duration-300"
                   />
                 </div>
