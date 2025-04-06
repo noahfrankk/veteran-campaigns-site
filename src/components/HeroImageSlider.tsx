@@ -8,11 +8,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// Client work images
+// Updated client work images with new uploads
 const images = [
-  "/lovable-uploads/17fb8b2e-400a-469d-9c36-d2dc9097c8a1.png",
-  "/lovable-uploads/41e8b3a2-5896-4846-bbc8-7fce84445ad7.png",
-  "/lovable-uploads/05403e95-4ce0-4741-89f1-86fdc721b9e4.png",
+  "/lovable-uploads/daf939d5-adbc-44ca-831e-ae3a2083853f.png",
+  "/lovable-uploads/a47949c9-3ba7-4d0b-9b73-a5bb95c3deb5.png",
+  "/lovable-uploads/719bb9ec-500b-4f84-894c-16ba44a24261.png",
   "/lovable-uploads/7b947215-8f55-4a9f-92be-d0b31f432174.png",
 ];
 

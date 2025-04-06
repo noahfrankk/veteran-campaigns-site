@@ -12,18 +12,18 @@ const VideoSection: React.FC = () => {
           </h2>
           
           <p className="text-lg leading-relaxed mb-8">
-            Veteran Campaigns brings industry-grade strategy to grassroots causes. We've been on the other side—as candidates, campaign managers, and digital leads—so we know what it takes to build a movement, because we've lived it.
+            Veteran Campaigns brings industry-grade strategy to grassroots causes. We've been on the other side, as candidates, campaign managers, and digital leads. We get what it takes to build a movement, because we've lived it.
           </p>
           
           <p className="text-lg leading-relaxed mb-8">
-            We know how to win, and we've done it again and again for our clients. Let's build yours next.
+            We know how to win, and we've done it again and again for our clients. Let's find your winning strategy next.
           </p>
           
           <Link 
             to="/past-work" 
             className="btn-secondary inline-block"
           >
-            Past Clients
+            See our previous work
           </Link>
         </div>
         
