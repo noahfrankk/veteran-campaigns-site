@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +7,7 @@ import {
   HoverCardTrigger,
   HoverCardContent
 } from "@/components/ui/hover-card";
+import { useNavigate } from "react-router-dom";
 
 interface Testimonial {
   quote: string;
@@ -22,6 +22,7 @@ interface ClientInfo {
 }
 
 const PastWork: React.FC = () => {
+  const navigate = useNavigate();
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const testimonials: Testimonial[] = [
     {
@@ -41,7 +42,6 @@ const PastWork: React.FC = () => {
     }
   ];
 
-  // Auto-rotate testimonials every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTestimonial(prev => (prev + 1) % testimonials.length);
@@ -49,7 +49,6 @@ const PastWork: React.FC = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  // Check if the URL has a hash and scroll to it after the page loads
   useEffect(() => {
     if (window.location.hash === "#clients") {
       const clientsSection = document.getElementById("clients");
@@ -61,7 +60,6 @@ const PastWork: React.FC = () => {
     }
   }, []);
 
-  // Array of client logos with detailed information
   const clientLogos = [
     {
       logo: "/lovable-uploads/027375c9-7928-4b48-9d29-6e4067c238f4.png",
@@ -153,11 +151,8 @@ const PastWork: React.FC = () => {
     },
   ];
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigateToContact = () => {
+    navigate('/#contact');
   };
 
   return (
@@ -275,9 +270,12 @@ const PastWork: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex justify-center mt-10">
+            <div className="flex flex-col items-center mt-10">
+              <p className="text-center text-gray-700 mb-4">
+                Like what you see? We'd love to hear from you.
+              </p>
               <button 
-                onClick={scrollToContact} 
+                onClick={navigateToContact} 
                 className="btn-primary"
                 aria-label="Get started with Veteran Campaigns"
               >
