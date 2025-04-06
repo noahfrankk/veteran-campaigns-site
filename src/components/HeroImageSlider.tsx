@@ -8,11 +8,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// Updated client work images with new uploads (first 3 from the uploads)
+// Updated client work images with the first three from the new uploads
 const images = [
-  "/lovable-uploads/33494cf3-5303-4f97-bac9-bd3fc412d590.png",
-  "/lovable-uploads/c9f3c25a-0fcd-4cc8-849c-4d014e4dbcd8.png",
-  "/lovable-uploads/42930263-f146-4382-89e9-8ac188ef3297.png",
+  "/lovable-uploads/027375c9-7928-4b48-9d29-6e4067c238f4.png",
+  "/lovable-uploads/ffe6f323-ca9e-4a84-910a-fb58cb12f534.png",
+  "/lovable-uploads/30e0140e-030a-41ee-8d89-6c8989da5f5e.png",
 ];
 
 const HeroImageSlider: React.FC = () => {
