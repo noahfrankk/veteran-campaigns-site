@@ -74,9 +74,10 @@ const PastWork: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Past Clients | Veteran Campaigns"
-        description="Explore our portfolio of past clients and successful political campaigns that we've helped win through strategic messaging and design."
+        title="Our Campaign Success Stories | Veteran Campaigns"
+        description="Explore our portfolio of successful political campaigns and clients. See how our strategic messaging and modern design have helped candidates win across the country."
         canonical="/past-work"
+        keywords="political campaign portfolio, campaign clients, election success stories, campaign testimonials, political marketing examples, winning campaigns"
       />
       <Header />
       <main>

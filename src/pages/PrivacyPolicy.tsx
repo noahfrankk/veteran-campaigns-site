@@ -9,8 +9,9 @@ const PrivacyPolicy: React.FC = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Privacy Policy | Veteran Campaigns"
-        description="Our privacy policy outlines how Veteran Campaigns collects, uses, and protects your personal information."
+        description="Our privacy policy outlines how Veteran Campaigns collects, uses, and protects your personal information when you use our website or services."
         canonical="/privacy-policy"
+        keywords="privacy policy, data protection, personal information, privacy terms, campaign privacy"
       />
       <Header />
       <main>

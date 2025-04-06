@@ -17,7 +17,7 @@ const images = [
 
 const HeroImageSlider: React.FC = () => {
   return (
-    <Carousel className="w-full max-w-lg">
+    <Carousel className="w-full max-w-[175%]">
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
@@ -27,7 +27,7 @@ const HeroImageSlider: React.FC = () => {
                   <img 
                     src={image} 
                     alt={`Campaign Example ${index + 1}`} 
-                    className="w-full h-full object-contain transition-all duration-300"
+                    className="w-full h-full object-contain transition-all duration-300 scale-[1.75]"
                   />
                 </div>
               </div>

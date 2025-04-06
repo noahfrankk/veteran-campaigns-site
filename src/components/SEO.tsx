@@ -8,6 +8,7 @@ interface SEOProps {
   image?: string;
   canonical?: string;
   type?: string;
+  keywords?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -15,7 +16,8 @@ const SEO: React.FC<SEOProps> = ({
   description = "Political campaign messaging and strategy experts",
   image = "/lovable-uploads/d5fdb083-a0e3-450e-8b5a-c0af24829c92.png",
   canonical = "",
-  type = "website"
+  type = "website",
+  keywords = "political campaigns, campaign messaging, campaign strategy, election strategy"
 }) => {
   const siteUrl = window.location.origin;
   const fullUrl = canonical ? `${siteUrl}${canonical}` : window.location.href;
@@ -25,6 +27,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Basic tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       {canonical && <link rel="canonical" href={fullUrl} />}
       
       {/* Open Graph tags */}
@@ -33,6 +36,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
+      <meta property="og:site_name" content="Veteran Campaigns" />
       
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
