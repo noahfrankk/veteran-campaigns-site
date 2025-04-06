@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a 
-                href="https://bsky.app" 
+                href="https://bsky.app/profile/veterancampaigns.bsky.social" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Bluesky"

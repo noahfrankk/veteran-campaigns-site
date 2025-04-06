@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="py-40 md:py-48 container-custom relative overflow-hidden">
+    <section className="py-24 md:py-32 container-custom relative overflow-hidden">
       {/* Decorative gradient elements */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary-cyan-blue/20 to-primary-dark-blue/30 rounded-full blur-xl -z-10 transform translate-x-1/4 -translate-y-1/4"></div>
       <div className="absolute top-20 right-32 w-[200px] h-[200px] bg-gradient-to-r from-primary-cyan-blue/30 to-primary-dark-blue/20 rounded-full blur-lg -z-10"></div>

@@ -65,8 +65,8 @@ const PrivacyPolicy: React.FC = () => {
               Veteran Media LLC<br />
               8 Wright Street, Suite 107<br />
               Westport, CT 06880<br />
-              <a href="mailto:privacy@veterancampaigns.com" className="text-primary-dark-blue">
-                privacy@veterancampaigns.com
+              <a href="mailto:info@veterancampaigns.com" className="text-primary-dark-blue">
+                info@veterancampaigns.com
               </a>
             </address>
           </div>
