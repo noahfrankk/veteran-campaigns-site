@@ -12,7 +12,7 @@ import {
 // Updated with newly uploaded hero images
 const images = [
   "/lovable-uploads/c1fa1053-d369-455d-9954-f4fc65e1d74f.png",
-  "/lovable-uploads/2836e905-4fb9-48f0-b38c-37dd2edd55dd.png",
+  "/lovable-uploads/88c8b938-bbc7-4f31-8c16-699406762764.png",
   "/lovable-uploads/db3fcf6e-9a6d-4d23-8062-701a2e13448d.png",
 ];
 
