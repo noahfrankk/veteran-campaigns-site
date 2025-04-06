@@ -22,6 +22,15 @@ const HeroSection: React.FC = () => {
       <div className="absolute bottom-10 right-10 w-[180px] h-[180px] bg-gradient-to-bl from-primary-cyan-blue/15 to-primary-dark-blue/25 rounded-full blur-xl -z-10"></div>
       <div className="absolute bottom-40 left-64 w-[100px] h-[100px] bg-gradient-to-r from-primary-dark-blue/20 to-transparent rounded-full blur-md -z-10"></div>
       
+      {/* Megaphone graphic in top right */}
+      <div className="absolute top-[-20px] right-[-30px] md:top-[-30px] md:right-[-20px] w-[180px] h-[180px] md:w-[220px] md:h-[220px] transform scale-[0.95] translate-x-[-5px] translate-y-[5px] -z-10">
+        <img 
+          src="/lovable-uploads/c4555be3-3fb4-49e2-b718-10ac4c70b5c0.png" 
+          alt="Megaphone graphic" 
+          className="w-full h-full object-contain"
+        />
+      </div>
+      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
