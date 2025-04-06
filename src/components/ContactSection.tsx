@@ -14,7 +14,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Link } from "react-router-dom";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -79,8 +78,8 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20 container-custom scroll-mt-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          <span className="gradient-text py-1 px-2 rounded">Are you a candidate? An advocate? A changemaker?</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">
+          Are you a candidate? An advocate? A changemaker?
         </h2>
         <p className="text-center text-lg mb-10">
           Fill out this brief form and our team will be in touch shortly.
@@ -158,12 +157,6 @@ const ContactSection: React.FC = () => {
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
-            
-            <p className="text-sm text-gray-400 text-center mt-4">
-              <Link to="/privacy-policy" className="hover:underline">
-                Read our Privacy Policy for more information about how we use your data.
-              </Link>
-            </p>
           </form>
         </Form>
       </div>
