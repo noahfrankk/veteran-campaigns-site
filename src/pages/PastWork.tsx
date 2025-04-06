@@ -78,12 +78,12 @@ const PastWork: React.FC = () => {
             {clientLogos.map((logo, index) => (
               <div 
                 key={index}
-                className="aspect-square bg-gray-300 rounded-md flex items-center justify-center p-4"
+                className="aspect-square bg-white rounded-md flex items-center justify-center p-4"
               >
                 <img 
                   src={logo} 
                   alt={`Client Logo ${index + 1}`} 
-                  className="max-w-[85%] max-h-[85%] object-contain filter"
+                  className="max-w-[85%] max-h-[85%] object-contain"
                 />
               </div>
             ))}

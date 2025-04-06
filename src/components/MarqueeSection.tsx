@@ -26,7 +26,7 @@ const MarqueeSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-primary-dark-blue/20">
+    <section className="py-20 bg-gray-100">
       <div className="container-custom">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">
           Trusted by those we've helped.
@@ -46,7 +46,7 @@ const MarqueeSection: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Client ${index + 1}`}
-                  className="max-w-[180%] max-h-[180%] object-contain filter"
+                  className="max-w-[180%] max-h-[180%] object-contain"
                 />
               </div>
             ))}
@@ -59,7 +59,7 @@ const MarqueeSection: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Client ${index + 1}`}
-                  className="max-w-[180%] max-h-[180%] object-contain filter"
+                  className="max-w-[180%] max-h-[180%] object-contain"
                 />
               </div>
             ))}
