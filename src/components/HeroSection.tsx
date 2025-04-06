@@ -11,8 +11,13 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="py-40 md:py-48 container-custom">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-40 md:py-48 container-custom relative overflow-hidden">
+      {/* Blue gradient elements */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary-cyan-blue/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-10 w-64 h-64 bg-primary-dark-blue/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-40 w-80 h-80 bg-primary-cyan-blue/15 rounded-full blur-3xl"></div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
             Build momentum.<br />
@@ -20,7 +25,7 @@ const HeroSection: React.FC = () => {
             Win <span className="italic gradient-text">big</span><span className="italic gradient-text">.</span>
           </h1>
           <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
-            You don't organize, vote, or talk like it's 2008, so <i><strong>why run a strategy like it is?</strong></i> We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy that drives change today.
+            You don't organize, vote, or talk like it's 2008, so <i><strong>why run a strategy like it is?</strong></i> <strong>Veteran Campaigns</strong> connects causes to communities with sharp creative, targeted outreach, and digital-first strategy that drives change today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button 

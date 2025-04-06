@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Target, Zap, BarChart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const StrategyBlock = ({ 
   title, 
@@ -26,9 +27,13 @@ const MessagingSection: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container-custom">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
-          How we deliver for our clients
+        <h2 className="text-2xl md:text-3xl font-semibold mb-3 text-center">
+          We deliver for our clients.
         </h2>
+        
+        <p className="text-center text-lg mb-8 max-w-2xl mx-auto">
+          Read more about how our work stands out from the competition and why we've earned the trust of countless campaigns and industry leaders.
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StrategyBlock
