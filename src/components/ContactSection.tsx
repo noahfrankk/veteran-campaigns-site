@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
           Are you a candidate? An advocate? A changemaker?
         </h2>
         <p className="text-center text-lg mb-10">
-          You're just one step away: fill out this brief form and our team will be in touch.
+          Fill out this brief form and our team will be in touch shortly.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6 border-2 border-gray-200 rounded-xl p-8 shadow-md">
