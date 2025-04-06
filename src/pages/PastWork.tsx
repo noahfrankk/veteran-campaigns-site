@@ -71,7 +71,7 @@ const PastWork: React.FC = () => {
       <main>
         <section id="clients" className="py-20 container-custom scroll-mt-20">
           <h1 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-            Case Studies
+            Past Clients
           </h1>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">

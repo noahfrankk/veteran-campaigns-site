@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -43,7 +42,7 @@ const Header = () => {
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center space-x-6">
         <Link to="/past-work" className="text-[#3c3c3c] hover:text-primary-dark-blue">
-          Case Studies
+          Past Clients
         </Link>
         <Button
           onClick={scrollToContact}
@@ -76,7 +75,7 @@ const Header = () => {
             className="text-[#3c3c3c] hover:text-primary-dark-blue"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Case Studies
+            Past Clients
           </Link>
           <button 
             onClick={scrollToContact}
