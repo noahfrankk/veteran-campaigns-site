@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroImageSlider from "./HeroImageSlider";
 
@@ -24,7 +23,6 @@ const HeroSection: React.FC = () => {
       {/* Vertical flowing blue gradient */}
       <div className="absolute top-0 bottom-0 left-1/3 w-[400px] bg-gradient-to-b from-primary-cyan-blue/10 via-white/5 to-primary-dark-blue/15 blur-3xl z-[-3]"></div>
       
-      {/* Container for content */}
       <div className="container-custom relative">
         {/* Decorative gradient circles repositioned to right side with animations */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary-cyan-blue/15 to-primary-dark-blue/20 rounded-full blur-xl z-[1] transform translate-x-1/4 -translate-y-1/4 animate-[pulse_8s_ease-in-out_infinite]"></div>
@@ -35,8 +33,6 @@ const HeroSection: React.FC = () => {
         <div className="absolute top-60 right-20 w-[150px] h-[150px] bg-gradient-to-tr from-primary-dark-blue/10 to-primary-cyan-blue/15 rounded-full blur-lg z-[1] animate-[pulse_15s_ease-in-out_infinite]" style={{ animationDelay: "3s" }}></div>
         <div className="absolute bottom-10 right-10 w-[180px] h-[180px] bg-gradient-to-bl from-primary-cyan-blue/12.5 to-primary-dark-blue/17.5 rounded-full blur-xl z-[1] animate-[pulse_9s_ease-in-out_infinite]" style={{ animationDelay: "0.5s" }}></div>
         <div className="absolute bottom-40 right-64 w-[100px] h-[100px] bg-gradient-to-r from-primary-dark-blue/15 to-transparent rounded-full blur-md z-[1] animate-[pulse_11s_ease-in-out_infinite]" style={{ animationDelay: "4s" }}></div>
-        
-        {/* Removed megaphone graphic */}
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           <div>

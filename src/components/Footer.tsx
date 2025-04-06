@@ -43,14 +43,9 @@ const Footer: React.FC = () => {
           {/* Address & Social Column */}
           <div className="flex flex-col">
             <address className="not-italic mb-4 text-gray-300">
-              Veteran Media LLC<br />
               8 Wright Street, Suite 107<br />
               Westport, CT 06880
             </address>
-            
-            <p className="text-sm text-gray-400 mb-4">
-              Veteran Campaigns is a division of Veteran Media, LLC.
-            </p>
             
             <div className="flex justify-start space-x-6">
               <a 
