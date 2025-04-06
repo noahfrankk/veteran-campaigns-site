@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { 
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent
+} from "@/components/ui/hover-card";
 
 interface Testimonial {
   quote: string;
@@ -70,22 +75,39 @@ const PastWork: React.FC = () => {
       <Header />
       <main>
         <section id="clients" className="py-20 container-custom scroll-mt-20">
-          <h1 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Past Clients
           </h1>
           
+          <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            We've worked with campaigns of all sizes. Click around to see some of the key races we've helped with.
+          </p>
+          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
             {clientLogos.map((logo, index) => (
-              <div 
-                key={index}
-                className="aspect-square bg-white rounded-md flex items-center justify-center p-4"
-              >
-                <img 
-                  src={logo} 
-                  alt={`Client Logo ${index + 1}`} 
-                  className="max-w-[85%] max-h-[85%] object-contain"
-                />
-              </div>
+              <HoverCard key={index}>
+                <HoverCardTrigger asChild>
+                  <div className="aspect-square bg-white rounded-md flex items-center justify-center p-4 transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img 
+                      src={logo} 
+                      alt={`Client Logo ${index + 1}`} 
+                      className="max-w-[85%] max-h-[85%] object-contain"
+                    />
+                  </div>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80 bg-white p-4 shadow-lg rounded-md border border-gray-200">
+                  <div className="flex flex-col gap-2">
+                    <img 
+                      src={logo} 
+                      alt={`Client Logo ${index + 1}`} 
+                      className="max-w-[60%] max-h-[60px] object-contain mb-2"
+                    />
+                    <p className="text-sm text-gray-500">
+                      Campaign details would appear here. Click to learn more about our work with this client.
+                    </p>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
             ))}
           </div>
         </section>
