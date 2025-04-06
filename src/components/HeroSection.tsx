@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="py-32 md:py-40 container-custom">
+    <section className="py-40 md:py-48 container-custom">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
             Win <span className="italic gradient-text">big</span><span className="italic gradient-text">.</span>
           </h1>
           <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
-            You don't organize, vote, or talk like it's 2008, so <i><strong>why run a strategy like it is?</strong></i> We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy built for how to drive change today.
+            You don't organize, vote, or talk like it's 2008, so <i><strong>why run a strategy like it is?</strong></i> We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy that drives change today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button 

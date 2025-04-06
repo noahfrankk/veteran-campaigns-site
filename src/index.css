@@ -43,7 +43,12 @@
   a {
     @apply transition-colors duration-200;
   }
+  /* Modified to prevent underlines on hover */
   a:hover {
+    @apply no-underline;
+  }
+  /* Add specific styles for links that should have underlines */
+  .text-link:hover {
     @apply underline;
   }
 }
