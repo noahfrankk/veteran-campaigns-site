@@ -15,6 +15,12 @@ interface Testimonial {
   position: string;
 }
 
+interface ClientInfo {
+  name: string;
+  details: string;
+  highlight?: string;
+}
+
 const PastWork: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const testimonials: Testimonial[] = [
@@ -55,20 +61,95 @@ const PastWork: React.FC = () => {
     }
   }, []);
 
-  // Array of client logos - updated with new uploads
+  // Array of client logos with detailed information
   const clientLogos = [
-    "/lovable-uploads/027375c9-7928-4b48-9d29-6e4067c238f4.png",
-    "/lovable-uploads/ffe6f323-ca9e-4a84-910a-fb58cb12f534.png",
-    "/lovable-uploads/30e0140e-030a-41ee-8d89-6c8989da5f5e.png",
-    "/lovable-uploads/32dafc41-0f1a-47ad-83b5-97a09ebfcde5.png",
-    "/lovable-uploads/d13494e4-5ac1-403d-aee9-93fa569b37a0.png",
-    "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png",
-    "/lovable-uploads/fd0fd64b-8598-4f15-9d7c-dc72710dfd6d.png",
-    "/lovable-uploads/3dcbff83-a5c7-4f92-93c6-7927bac2d41d.png",
-    "/lovable-uploads/41c2a24e-7b14-482e-9c7c-9bcfecbf8998.png",
-    "/lovable-uploads/a4111b7a-e8f8-4da3-9427-6ee2acec1b4a.png",
-    "/lovable-uploads/fa7fdb58-3ed8-48e2-a68e-216f7fdd42bc.png",
-    "/lovable-uploads/e067a27e-85d0-4044-b748-1277c38297ce.png",
+    {
+      logo: "/lovable-uploads/027375c9-7928-4b48-9d29-6e4067c238f4.png",
+      info: {
+        name: "King for State Rep",
+        details: "King for State Representative, CT HD-14. Hartford County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/ffe6f323-ca9e-4a84-910a-fb58cb12f534.png",
+      info: {
+        name: "Ethan Werstler for State Rep",
+        details: "Werstler for State Representative, CT HD-52. Tolland, Windham Counties."
+      }
+    },
+    {
+      logo: "/lovable-uploads/30e0140e-030a-41ee-8d89-6c8989da5f5e.png",
+      info: {
+        name: "Jennifer Leeper",
+        details: "Leeper for State Representative, CT HD-132. Fairfield County.",
+        highlight: "Special election"
+      }
+    },
+    {
+      logo: "/lovable-uploads/32dafc41-0f1a-47ad-83b5-97a09ebfcde5.png",
+      info: {
+        name: "Sarah Keitt",
+        details: "Keitt for CT, CT HD-134. Fairfield County.",
+        highlight: "Flipped seat"
+      }
+    },
+    {
+      logo: "/lovable-uploads/d13494e4-5ac1-403d-aee9-93fa569b37a0.png",
+      info: {
+        name: "Kathy Caulfield",
+        details: "Kathy Caulfield for Probate Judge. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png", 
+      info: {
+        name: "Nick Kapoor",
+        details: "Kapoor for State Representative, CT HD-112. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/fd0fd64b-8598-4f15-9d7c-dc72710dfd6d.png",
+      info: {
+        name: "Steinberg",
+        details: "Steinberg for State Representative, CT HD-136. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/3dcbff83-a5c7-4f92-93c6-7927bac2d41d.png",
+      info: {
+        name: "Tim Gavin",
+        details: "Gavin for State Senate, CT SD-28. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/41c2a24e-7b14-482e-9c7c-9bcfecbf8998.png",
+      info: {
+        name: "Delany",
+        details: "Hubert for CT, CT HD-144. Fairfield County.",
+        highlight: "Special election"
+      }
+    },
+    {
+      logo: "/lovable-uploads/a4111b7a-e8f8-4da3-9427-6ee2acec1b4a.png",
+      info: {
+        name: "Volpe",
+        details: "Volpe for State Representative, CT HD-134. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/fa7fdb58-3ed8-48e2-a68e-216f7fdd42bc.png",
+      info: {
+        name: "Harriman-Stites",
+        details: "Harriman-Stites for State Representative, CT HD-106. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/e067a27e-85d0-4044-b748-1277c38297ce.png",
+      info: {
+        name: "Tesoro",
+        details: "Tesoro for State Representative, CT HD-123. Fairfield County."
+      }
+    },
   ];
 
   return (
@@ -91,13 +172,13 @@ const PastWork: React.FC = () => {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
-            {clientLogos.map((logo, index) => (
+            {clientLogos.map((client, index) => (
               <HoverCard key={index}>
                 <HoverCardTrigger asChild>
                   <div className="aspect-square bg-white rounded-md flex items-center justify-center p-4 transition-all duration-300 hover:scale-110 cursor-pointer">
                     <img 
-                      src={logo} 
-                      alt={`Client Logo ${index + 1}`} 
+                      src={client.logo} 
+                      alt={`${client.info.name} Logo`} 
                       className="max-w-[85%] max-h-[85%] object-contain"
                     />
                   </div>
@@ -105,13 +186,18 @@ const PastWork: React.FC = () => {
                 <HoverCardContent className="w-80 bg-white p-4 shadow-lg rounded-md border border-gray-200">
                   <div className="flex flex-col gap-2">
                     <img 
-                      src={logo} 
-                      alt={`Client Logo ${index + 1}`} 
+                      src={client.logo} 
+                      alt={`${client.info.name} Logo`} 
                       className="max-w-[60%] max-h-[60px] object-contain mb-2"
                     />
-                    <p className="text-sm text-gray-500">
-                      Campaign details would appear here. Click to learn more about our work with this client.
+                    <p className="text-sm text-gray-700">
+                      {client.info.details}
                     </p>
+                    {client.info.highlight && (
+                      <p className="text-sm font-bold text-primary-dark-blue">
+                        {client.info.highlight}
+                      </p>
+                    )}
                   </div>
                 </HoverCardContent>
               </HoverCard>

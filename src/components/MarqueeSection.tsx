@@ -2,7 +2,7 @@
 import React from "react";
 
 const MarqueeSection: React.FC = () => {
-  // Array of client logos - updated with newly uploaded images
+  // Array of client logos - using simple array structure for marquee
   const clientLogos = [
     "/lovable-uploads/027375c9-7928-4b48-9d29-6e4067c238f4.png",
     "/lovable-uploads/ffe6f323-ca9e-4a84-910a-fb58cb12f534.png",
