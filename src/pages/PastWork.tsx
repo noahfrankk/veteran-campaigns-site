@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { 
   HoverCard,
   HoverCardTrigger,
@@ -72,6 +73,11 @@ const PastWork: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Past Clients | Veteran Campaigns"
+        description="Explore our portfolio of past clients and successful political campaigns that we've helped win through strategic messaging and design."
+        canonical="/past-work"
+      />
       <Header />
       <main>
         <section id="clients" className="py-20 container-custom scroll-mt-20">

@@ -2,10 +2,16 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Privacy Policy | Veteran Campaigns"
+        description="Our privacy policy outlines how Veteran Campaigns collects, uses, and protects your personal information."
+        canonical="/privacy-policy"
+      />
       <Header />
       <main>
         <section className="py-20 container-custom">

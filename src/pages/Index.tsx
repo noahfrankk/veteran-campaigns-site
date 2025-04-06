@@ -8,10 +8,16 @@ import MarqueeSection from "@/components/MarqueeSection";
 import ContactSection from "@/components/ContactSection";
 import CorporateClientsSection from "@/components/CorporateClientsSection";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Veteran Campaigns | Political Campaign Strategy Experts"
+        description="Veteran Campaigns provides expert political campaign messaging, design and strategy to help candidates win elections."
+        canonical="/"
+      />
       <Header />
       <main>
         <HeroSection />
