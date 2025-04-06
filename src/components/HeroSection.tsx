@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroImageSlider from "./HeroImageSlider";
 
@@ -23,11 +22,11 @@ const HeroSection: React.FC = () => {
       <div className="absolute bottom-40 left-64 w-[100px] h-[100px] bg-gradient-to-r from-primary-dark-blue/20 to-transparent rounded-full blur-md -z-10"></div>
       
       {/* Megaphone graphic in top right - improved positioning and z-index */}
-      <div className="absolute top-[-20px] right-[-30px] md:top-[-30px] md:right-[-20px] w-[180px] h-[180px] md:w-[220px] md:h-[220px] transform scale-[0.95] translate-x-[-5px] translate-y-[5px] z-0">
+      <div className="absolute top-[-50px] right-[-80px] md:top-[-100px] md:right-[-120px] w-[350px] h-[350px] md:w-[500px] md:h-[500px] transform -translate-x-1/4 translate-y-1/4 opacity-30 -z-10">
         <img 
           src="/lovable-uploads/c4555be3-3fb4-49e2-b718-10ac4c70b5c0.png" 
           alt="Megaphone graphic" 
-          className="w-full h-full object-contain opacity-100"
+          className="w-full h-full object-contain"
         />
       </div>
       
