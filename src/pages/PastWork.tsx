@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,17 +13,17 @@ const PastWork: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const testimonials: Testimonial[] = [
     {
-      quote: "Thoughtful direction, brilliant designers...",
+      quote: "Thoughtful direction, brilliant designers, and a strategic approach to our campaign messaging made Veteran Campaigns the perfect partner for our team.",
       author: "Ethan Werstler",
       position: "CT HD-52"
     },
     {
-      quote: "No better team than Veteran Campaigns...",
+      quote: "No better team than Veteran Campaigns to create a powerful message and visual identity that cuts through the noise and resonates with voters.",
       author: "Nick Kapoor",
       position: "CT HD-112"
     },
     {
-      quote: "Working with Veteran Campaigns has been a game-changer…",
+      quote: "Working with Veteran Campaigns has been a game-changer for our outreach efforts. Their expertise in digital strategy and voter engagement is unmatched.",
       author: "Mitchell Marks",
       position: "CT HD-14"
     }
@@ -48,6 +49,22 @@ const PastWork: React.FC = () => {
     }
   }, []);
 
+  // Array of client logos - updated with new uploads
+  const clientLogos = [
+    "/lovable-uploads/33494cf3-5303-4f97-bac9-bd3fc412d590.png",
+    "/lovable-uploads/c9f3c25a-0fcd-4cc8-849c-4d014e4dbcd8.png",
+    "/lovable-uploads/42930263-f146-4382-89e9-8ac188ef3297.png",
+    "/lovable-uploads/4e80b0d2-018f-4b68-b95f-3a41c97a84ca.png",
+    "/lovable-uploads/050865d1-0286-4f8a-b79e-16a9208d8719.png",
+    "/lovable-uploads/055c54c9-bcbf-42c0-b6b6-8c3b534b4581.png",
+    "/lovable-uploads/6b90581d-1c49-457a-92fa-e705007045ed.png",
+    "/lovable-uploads/92d624da-7828-4abd-897b-2eeac1a5b735.png",
+    "/lovable-uploads/e7360643-8bfa-4f9b-ad54-5961a93bf9c9.png",
+    "/lovable-uploads/03c932c9-fe8e-4fe7-97a1-a62d168eee68.png",
+    "/lovable-uploads/0270074c-159e-464d-8921-c85bd4b009df.png",
+    "/lovable-uploads/08e15d17-1e8f-4a27-a233-b0c4e2b2c5fc.png",
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -58,12 +75,16 @@ const PastWork: React.FC = () => {
           </h1>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
-            {Array(12).fill(0).map((_, index) => (
+            {clientLogos.map((logo, index) => (
               <div 
                 key={index}
                 className="aspect-square bg-gray-100 rounded-md flex items-center justify-center p-4"
               >
-                <div className="text-gray-500">Client Logo {index + 1}</div>
+                <img 
+                  src={logo} 
+                  alt={`Client Logo ${index + 1}`} 
+                  className="max-w-[85%] max-h-[85%] object-contain filter grayscale"
+                />
               </div>
             ))}
           </div>
@@ -93,21 +114,22 @@ const PastWork: React.FC = () => {
               
               {/* Right Side: Testimonial Carousel */}
               <div className="bg-white p-8 rounded-lg shadow-subtle">
-                <div className="relative h-full">
-                  <div className="flex flex-col justify-between h-full">
-                    <div>
-                      <svg 
-                        className="h-10 w-10 text-gray-300 mb-4" 
-                        fill="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                      </svg>
-                      <p className="text-lg mb-6">
-                        {testimonials[activeTestimonial].quote}
-                      </p>
-                    </div>
-                    <div>
+                <div className="relative flex flex-col justify-between h-full">
+                  <div>
+                    <svg 
+                      className="h-10 w-10 text-gray-300 mb-4" 
+                      fill="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                    <p className="text-lg mb-10 min-h-[80px]">
+                      {testimonials[activeTestimonial].quote}
+                    </p>
+                  </div>
+                  
+                  <div className="flex justify-end">
+                    <div className="text-right">
                       <p className="font-semibold">{testimonials[activeTestimonial].author}</p>
                       <p className="text-gray-600">{testimonials[activeTestimonial].position}</p>
                     </div>
