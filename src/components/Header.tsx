@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -16,11 +16,15 @@ const Header = () => {
   }, []);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false);
+    if (window.location.pathname !== '/') {
+      navigate('/#contact');
+    } else {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -34,12 +38,11 @@ const Header = () => {
           <img 
             src="/lovable-uploads/d5fdb083-a0e3-450e-8b5a-c0af24829c92.png" 
             alt="Veteran Campaigns Logo" 
-            className="h-12 w-auto"  // Increased from h-10 to h-12 (25% larger)
+            className="h-12 w-auto"
           />
         </Link>
       </div>
 
-      {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center space-x-6">
         <Link to="/past-work" className="text-[#3c3c3c] hover:text-primary-dark-blue">
           Past Clients
@@ -52,7 +55,6 @@ const Header = () => {
         </Button>
       </nav>
 
-      {/* Mobile Menu Button */}
       <button 
         className="md:hidden text-black" 
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -67,7 +69,6 @@ const Header = () => {
         </svg>
       </button>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-md border-b border-[#eeeeee] py-4 px-8 flex flex-col space-y-4 z-50">
           <Link 
