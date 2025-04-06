@@ -5,9 +5,12 @@ const CtaBlock: React.FC = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           We deliver for our clients.
         </h2>
+        <p className="text-center text-lg mb-12">
+          Read more about how our work stands out from the competition and why we've earned the trust of countless campaigns and industry leaders.
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-8 rounded-lg shadow-sm">

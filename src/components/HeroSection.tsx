@@ -11,7 +11,12 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="py-40 md:py-48 container-custom">
+    <section className="py-40 md:py-48 container-custom relative overflow-hidden">
+      {/* Decorative gradient elements */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-primary-cyan-blue/20 to-primary-dark-blue/30 rounded-full blur-xl -z-10 transform translate-x-1/4 -translate-y-1/4"></div>
+      <div className="absolute top-20 right-32 w-[200px] h-[200px] bg-gradient-to-r from-primary-cyan-blue/30 to-primary-dark-blue/20 rounded-full blur-lg -z-10"></div>
+      <div className="absolute top-40 right-64 w-[120px] h-[120px] bg-gradient-to-tl from-primary-cyan-blue/40 to-transparent rounded-full blur-md -z-10"></div>
+      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight mb-6">
@@ -20,7 +25,7 @@ const HeroSection: React.FC = () => {
             Win <span className="italic gradient-text">big</span><span className="italic gradient-text">.</span>
           </h1>
           <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]">
-            You don't organize, vote, or talk like it's 2008, so <i><strong>why run a strategy like it is?</strong></i> We connect causes to communities with sharp creative, targeted outreach, and digital-first strategy that drives change today.
+            Veteran Campaigns connects causes to communities with sharp creative, targeted outreach, and digital-first strategy that gets results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button 
@@ -39,7 +44,10 @@ const HeroSection: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-end relative">
+          {/* Additional decorative elements */}
+          <div className="absolute w-[150px] h-[150px] bg-gradient-to-br from-primary-dark-blue/10 to-primary-cyan-blue/20 rounded-full blur-lg -z-10 -bottom-10 -left-10"></div>
+          
           <HeroImageSlider />
         </div>
       </div>

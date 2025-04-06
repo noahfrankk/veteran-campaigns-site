@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Link } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -78,7 +79,7 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20 container-custom scroll-mt-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center gradient-text">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
           Are you a candidate? An advocate? A changemaker?
         </h2>
         <p className="text-center text-lg mb-10">
@@ -157,6 +158,10 @@ const ContactSection: React.FC = () => {
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
+            
+            <p className="text-xs text-gray-400 text-center mt-4">
+              Read our <Link to="/privacy-policy" className="font-bold text-primary-cyan-blue hover:underline">Privacy Policy</Link> for more information about how we use your data.
+            </p>
           </form>
         </Form>
       </div>

@@ -7,6 +7,7 @@ import MessagingSection from "@/components/MessagingSection";
 import MarqueeSection from "@/components/MarqueeSection";
 import ContactSection from "@/components/ContactSection";
 import CorporateClientsSection from "@/components/CorporateClientsSection";
+import CtaBlock from "@/components/CtaBlock";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
@@ -24,6 +25,7 @@ const Index: React.FC = () => {
         <HeroSection />
         <VideoSection />
         <MessagingSection />
+        <CtaBlock />
         <MarqueeSection />
         <ContactSection />
         <CorporateClientsSection />
