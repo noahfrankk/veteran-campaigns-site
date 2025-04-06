@@ -1,38 +1,59 @@
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
+const formSchema = z.object({
+  name: z.string().min(1, { message: "Name is required" }),
+  email: z.string().email({ message: "Valid email is required" }),
+  message: z.string().min(1, { message: "Message is required" })
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const ContactSection: React.FC = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: ""
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: ""
+    }
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true);
 
     try {
-      // In a real implementation, this would connect to Supabase
-      // For now, we'll simulate a successful submission
       console.log("Form submitted:", formData);
       
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Insert data into Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          { 
+            name: formData.name,
+            email: formData.email,
+            message: formData.message
+          }
+        ]);
+        
+      if (error) throw error;
       
       // Show success message
       toast({
@@ -41,7 +62,7 @@ const ContactSection: React.FC = () => {
       });
       
       // Reset form
-      setFormData({ name: "", email: "", message: "" });
+      form.reset();
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
@@ -64,56 +85,70 @@ const ContactSection: React.FC = () => {
           Fill out this brief form and our team will be in touch shortly.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6 border-2 border-gray-200 rounded-xl p-8 shadow-md">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Name
-            </label>
-            <input
-              id="name"
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6 border-2 border-gray-200 rounded-xl p-8 shadow-md">
+            <FormField
+              control={form.control}
               name="name"
-              type="text"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-dark-blue"
-              aria-label="Your name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="block text-sm font-medium mb-1">
+                    Name
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      placeholder="Your name"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-dark-blue placeholder:text-gray-400"
+                      aria-label="Your name"
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
             />
-          </div>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">
-              Email
-            </label>
-            <input
-              id="email"
+            <FormField
+              control={form.control}
               name="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-dark-blue"
-              aria-label="Your email address"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="block text-sm font-medium mb-1">
+                    Email
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      type="email"
+                      placeholder="your.email@example.com"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-dark-blue placeholder:text-gray-400"
+                      aria-label="Your email address"
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
             />
-          </div>
 
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1">
-              How can we help?
-            </label>
-            <textarea
-              id="message"
+            <FormField
+              control={form.control}
               name="message"
-              rows={4}
-              required
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-dark-blue"
-              aria-label="Your message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="block text-sm font-medium mb-1">
+                    How can we help?
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      {...field}
+                      placeholder="Tell us about your campaign needs..."
+                      rows={4}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-dark-blue placeholder:text-gray-400"
+                      aria-label="Your message"
+                    />
+                  </FormControl>
+                </FormItem>
+              )}
             />
-          </div>
 
-          <div>
             <button
               type="submit"
               disabled={isSubmitting}
@@ -122,8 +157,8 @@ const ContactSection: React.FC = () => {
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
-          </div>
-        </form>
+          </form>
+        </Form>
       </div>
     </section>
   );
