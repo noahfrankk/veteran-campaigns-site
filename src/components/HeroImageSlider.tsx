@@ -1,11 +1,12 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { 
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi
 } from "@/components/ui/carousel";
 
 // Updated with newly uploaded hero images
@@ -16,8 +17,23 @@ const images = [
 ];
 
 const HeroImageSlider: React.FC = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
+
+  // Set up auto-scrolling with useEffect
+  useEffect(() => {
+    if (!api) return;
+
+    // Auto-scroll interval (5 seconds)
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 5000);
+
+    // Clear the interval when component unmounts
+    return () => clearInterval(interval);
+  }, [api]);
+
   return (
-    <Carousel className="w-full max-w-[175%]">
+    <Carousel className="w-full max-w-[175%]" setApi={setApi}>
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
