@@ -19,8 +19,12 @@ const SEO: React.FC<SEOProps> = ({
   type = "website",
   keywords = "Veteran Campaigns, political campaigns, campaign messaging, campaign strategy, election strategy"
 }) => {
-  const siteUrl = window.location.origin;
-  const fullUrl = canonical ? `${siteUrl}${canonical}` : window.location.href;
+  // Get the current path from window.location
+  const path = window.location.pathname;
+  
+  // Always use the www version for canonical URLs
+  const siteUrl = "https://www.veterancampaigns.com";
+  const fullUrl = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${path}`;
   
   return (
     <Helmet>
@@ -28,7 +32,7 @@ const SEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={fullUrl} />}
+      <link rel="canonical" href={fullUrl} />
       
       {/* Open Graph tags */}
       <meta property="og:url" content={fullUrl} />

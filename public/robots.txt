@@ -2,8 +2,11 @@
 User-agent: *
 Allow: /
 
+# Preferred domain directive
+Host: www.veterancampaigns.com
+
 # Sitemap location
-Sitemap: https://veterancampaigns.com/sitemap.xml
+Sitemap: https://www.veterancampaigns.com/sitemap.xml
 
 # Specific crawl-delay for search engines
 Crawl-delay: 10
