@@ -4,3 +4,6 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://veterancampaigns.com/sitemap.xml
+
+# Specific crawl-delay for search engines
+Crawl-delay: 10
