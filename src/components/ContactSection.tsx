@@ -9,6 +9,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -104,6 +105,7 @@ const ContactSection: React.FC = () => {
                       aria-label="Your name"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
@@ -125,6 +127,7 @@ const ContactSection: React.FC = () => {
                       aria-label="Your email address"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
@@ -146,6 +149,7 @@ const ContactSection: React.FC = () => {
                       aria-label="Your message"
                     />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
