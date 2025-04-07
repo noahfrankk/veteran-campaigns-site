@@ -11,7 +11,7 @@ const PrivacyPolicy: React.FC = () => {
         title="Privacy Policy | Veteran Campaigns"
         description="Our privacy policy outlines how Veteran Campaigns collects, uses, and protects your personal information when you use our website or services."
         canonical="/privacy-policy"
-        keywords="privacy policy, data protection, personal information, privacy terms, campaign privacy"
+        keywords="privacy policy, data protection, personal information, privacy terms, campaign privacy, data security"
       />
       <Header />
       <main>

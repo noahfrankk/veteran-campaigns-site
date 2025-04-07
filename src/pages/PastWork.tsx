@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -161,7 +162,7 @@ const PastWork: React.FC = () => {
         title="Our Campaign Success Stories | Veteran Campaigns"
         description="Explore our portfolio of successful political campaigns and clients. See how our strategic messaging and modern design have helped candidates win across the country."
         canonical="/past-work"
-        keywords="political campaign portfolio, campaign clients, election success stories, campaign testimonials, political marketing examples, winning campaigns"
+        keywords="political campaign portfolio, campaign clients, election success stories, campaign testimonials, political marketing examples, winning campaigns, case studies"
       />
       <Header />
       <main>

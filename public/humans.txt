@@ -1,0 +1,15 @@
+
+/* TEAM */
+	
+	Name: Veteran Campaigns
+	Site: https://www.veterancampaigns.com
+	Email: info@veterancampaigns.com
+	Location: Westport, CT, USA
+
+/* SITE */
+	
+	Last update: 2025-04-07
+	Language: English
+	Standards: HTML5, CSS3, JavaScript
+	Components: React, TailwindCSS
+	Software: Lovable
