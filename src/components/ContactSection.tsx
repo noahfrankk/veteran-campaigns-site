@@ -80,7 +80,7 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20 container-custom scroll-mt-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text leading-tight whitespace-normal">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text leading-normal">
           Are you a candidate? An advocate? A changemaker?
         </h2>
         <p className="text-center text-lg mb-10">
