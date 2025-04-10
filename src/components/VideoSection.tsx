@@ -13,7 +13,7 @@ const VideoSection: React.FC = () => {
             </h2>
             
             <p className="text-lg leading-relaxed mb-8">
-              You don't organize, vote, or talk like it's 2008, <i><strong>so why run your strategy like it is?</strong></i>
+              You don't organize, vote, or talk like it's 2008, <i><strong>so why run your campaign strategy like it is?</strong></i>
             </p>
             
             <p className="text-lg leading-relaxed mb-4">
