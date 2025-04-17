@@ -47,13 +47,13 @@ const Ready = () => {
               variants={fadeIn}
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight">
-                Built for campaigns that <span className="gradient-text">won't settle.</span>
+                Built for campaigns that <span className="gradient-text">don't wait around.</span>
               </h1>
               <h2 className="text-2xl md:text-3xl mb-8 text-gray-700 max-w-3xl">
-                Communications today move fast. So should your strategy.
+                Communications move fast. Your strategy should, too.
               </h2>
               <p className="text-xl mb-12 text-gray-600 leading-relaxed max-w-3xl">
-                The way people vote, talk, and organize has changed. If your strategy hasn't, you're already behind. Veteran Campaigns helps candidates meet this moment with creative that's sharp, digital that's intentional, and strategy that fits the way people actually communicate.
+                The way people vote, talk, and organize has changed. If your strategy hasn't kept up, it's already showing. Veteran Campaigns helps campaigns meet this moment with creative that lands, digital that's purposeful, and strategy that matches how people actually communicate.
               </p>
               <div className="w-24 h-1 bg-primary-dark-blue mb-16"></div>
             </motion.div>
@@ -84,7 +84,7 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
-                  The old playbook doesn't work anymore.
+                  What we're seeing on the ground
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                   <div className="space-y-6 text-gray-600">
@@ -94,7 +94,7 @@ const Ready = () => {
                   </div>
                   <div className="space-y-6 text-gray-600">
                     <p className="text-xl leading-relaxed">
-                      Today, voters expect clarity and consistency. Campaigns need communications that move across platforms, stay on message, and adapt in real time.
+                      Voters expect clarity and consistency. Campaigns need messaging that works across platforms, stays aligned, and responds in real time.
                     </p>
                   </div>
                 </div>
@@ -107,17 +107,17 @@ const Ready = () => {
                   <div className="p-6 rounded-lg hover:shadow-md transition-shadow">
                     <Zap size={48} className="text-primary-dark-blue mx-auto mb-4" />
                     <h3 className="text-lg font-bold mb-2">Rapid Response</h3>
-                    <p className="text-gray-600">Communications that move at the speed of news</p>
+                    <p className="text-gray-600">Messaging that keeps pace with the moment</p>
                   </div>
                   <div className="p-6 rounded-lg hover:shadow-md transition-shadow">
                     <Target size={48} className="text-primary-dark-blue mx-auto mb-4" />
                     <h3 className="text-lg font-bold mb-2">Targeted Outreach</h3>
-                    <p className="text-gray-600">Precision messaging for specific voter groups</p>
+                    <p className="text-gray-600">Voter-specific strategy that doesn't waste time or budget</p>
                   </div>
                   <div className="p-6 rounded-lg hover:shadow-md transition-shadow">
                     <BarChart3 size={48} className="text-primary-dark-blue mx-auto mb-4" />
                     <h3 className="text-lg font-bold mb-2">Data-Driven</h3>
-                    <p className="text-gray-600">Insights that shape effective strategies</p>
+                    <p className="text-gray-600">Real data, real direction</p>
                   </div>
                 </div>
               </motion.div>
@@ -155,7 +155,7 @@ const Ready = () => {
                     We connect <span className="text-primary-dark-blue">causes</span> to <span className="text-primary-dark-blue">communities</span>.
                   </h2>
                   <h3 className="text-2xl text-gray-700">
-                    Strategy and execution, aligned from day one.
+                    Strategy and execution, working together from day one.
                   </h3>
                   <div className="space-y-6 text-gray-600">
                     <p className="text-lg leading-relaxed">
@@ -310,8 +310,8 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
-                  This is a pivotal cycle.<br /> 
-                  <span className="text-primary-dark-blue">Run a campaign that reflects it.</span>
+                  2026 is different.<br /> 
+                  <span className="text-primary-dark-blue">Run a campaign that shows it.</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-600 mb-16">
                   <p className="text-lg leading-relaxed">
@@ -321,7 +321,7 @@ const Ready = () => {
                     2026 is a golden opportunity to make your case. Political headwinds are shifting. Voters are paying attention and ready to support a cause they believe in.
                   </p>
                   <p className="text-lg leading-relaxed">
-                    Your campaign deserves a partner that understands how to reach them. We don't offer a menu of tactics. We offer a team that can think, build, and execute alongside yours.
+                    Your campaign deserves a partner that understands how to reach them. We're not another line on the vendor list. We're your comms team.
                   </p>
                 </div>
               </motion.div>
@@ -344,6 +344,7 @@ const Ready = () => {
                     Contact Us
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
+                  <p className="mt-6 text-gray-600">We'll meet you where you are, and help take it from there.</p>
                 </div>
               </motion.div>
               
