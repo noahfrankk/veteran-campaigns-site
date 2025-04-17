@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import PastWork from "./pages/PastWork";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import Ready from "./pages/Ready";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/past-work" element={<PastWork />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/ready" element={<Ready />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
