@@ -6,7 +6,13 @@ import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Target, BarChart3, Megaphone } from "lucide-react";
+import { 
+  ArrowRight, 
+  BarChart3, 
+  FileText,
+  Users,
+  Check,
+} from "lucide-react";
 import { 
   Card,
   CardContent,
@@ -14,6 +20,7 @@ import {
   CardTitle,
   CardDescription 
 } from "@/components/ui/card";
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const Ready = () => {
   // Animation variants
@@ -26,11 +33,48 @@ const Ready = () => {
     }
   };
 
+  const fadeInRight = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  const staggerChildren = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
     <>
       <SEO 
-        title="What We Can Do For You | Veteran Campaigns" 
-        description="Veteran Campaigns helps candidates meet this moment with creative that's sharp, digital that's intentional, and strategy that fits the way people actually communicate."
+        title="Campaign Communications Strategy | Veteran Campaigns" 
+        description="Veteran Campaigns connects causes to communities, partnering with campaigns to deliver effective communication across all channels."
         canonical="/ready"
       />
       <div className="flex flex-col min-h-screen">
@@ -38,324 +82,708 @@ const Ready = () => {
         
         <main className="flex-grow">
           {/* SECTION 1: Hero */}
-          <section className="py-24 lg:py-32 container-custom">
-            <motion.div 
-              className="max-w-4xl mx-auto"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-            >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight leading-tight">
-                Built for campaigns that <span className="gradient-text">don't wait around.</span>
-              </h1>
-              <h2 className="text-2xl md:text-3xl mb-8 text-gray-700 max-w-3xl">
-                Communications move fast. Your strategy should, too.
-              </h2>
-              <p className="text-xl mb-12 text-gray-600 leading-relaxed max-w-3xl">
-                The way people vote, talk, and organize has changed. If your strategy hasn't kept up, it's already showing. Veteran Campaigns helps campaigns meet this moment with creative that lands, digital that's purposeful, and strategy that matches how people actually communicate.
-              </p>
-              <div className="w-24 h-1 bg-primary-dark-blue mb-16"></div>
-            </motion.div>
+          <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-primary-dark-blue/10 to-blue-100">
+            <div className="absolute inset-0 bg-black/5 mix-blend-multiply">
+              {/* Placeholder for full-screen hero background image */}
+              <div className="absolute inset-0 flex items-center justify-center text-gray-400/20 text-2xl font-light">
+                [Image placeholder: candidate speaking or community scene]
+              </div>
+            </div>
             
-            <motion.div 
-              className="relative mt-8 overflow-hidden rounded-xl"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <img 
-                src="/lovable-uploads/daf939d5-adbc-44ca-831e-ae3a2083853f.png" 
-                alt="Campaign in action" 
-                className="w-full h-auto object-cover rounded-xl shadow-lg" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-dark-blue/40 to-transparent rounded-xl"></div>
-            </motion.div>
-          </section>
-          
-          {/* SECTION 2: The Landscape */}
-          <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
-            <div className="container-custom">
+            <div className="container-custom relative z-10 py-20">
               <motion.div 
-                className="max-w-4xl mx-auto"
+                className="max-w-3xl mx-auto text-center"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
-                  What we're seeing on the ground
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                  <div className="space-y-6 text-gray-600">
-                    <p className="text-xl leading-relaxed">
-                      Too many consultants are still solving for a version of the world that no longer exists. Generic mailers, disjointed outreach, and vendor silos don't reflect how people make decisions or how campaigns win.
-                    </p>
-                  </div>
-                  <div className="space-y-6 text-gray-600">
-                    <p className="text-xl leading-relaxed">
-                      Voters expect clarity and consistency. Campaigns need messaging that works across platforms, stays aligned, and responds in real time.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex justify-center my-16">
-                  <div className="w-24 h-0.5 bg-gray-300"></div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                  <div className="p-6 rounded-lg hover:shadow-md transition-shadow">
-                    <Zap size={48} className="text-primary-dark-blue mx-auto mb-4" />
-                    <h3 className="text-lg font-bold mb-2">Rapid Response</h3>
-                    <p className="text-gray-600">Messaging that keeps pace with the moment</p>
-                  </div>
-                  <div className="p-6 rounded-lg hover:shadow-md transition-shadow">
-                    <Target size={48} className="text-primary-dark-blue mx-auto mb-4" />
-                    <h3 className="text-lg font-bold mb-2">Targeted Outreach</h3>
-                    <p className="text-gray-600">Voter-specific strategy that doesn't waste time or budget</p>
-                  </div>
-                  <div className="p-6 rounded-lg hover:shadow-md transition-shadow">
-                    <BarChart3 size={48} className="text-primary-dark-blue mx-auto mb-4" />
-                    <h3 className="text-lg font-bold mb-2">Data-Driven</h3>
-                    <p className="text-gray-600">Real data, real direction</p>
-                  </div>
-                </div>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                  Campaign communications strategy for today
+                </h1>
+                <p className="text-xl md:text-2xl mb-12 text-gray-800 leading-relaxed">
+                  You need a partner who understands your message—and how to deliver it to the right people. Veteran Campaigns connects causes to communities, centering on your message over the medium. We bring best practices from campaigns and adjacent industries to get results.
+                </p>
+                <Button 
+                  size="lg" 
+                  className="bg-primary-dark-blue text-white px-8 py-7 text-lg h-auto rounded-lg shadow-lg hover:bg-primary-dark-blue/90 transition-all"
+                  onClick={() => window.location.href = "mailto:info@veterancampaigns.com"}
+                >
+                  Let's talk about your district
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </motion.div>
             </div>
           </section>
           
-          {/* SECTION 3: Our Approach */}
-          <section className="py-20 container-custom">
-            <div className="max-w-6xl mx-auto">
+          {/* SECTION 2: Context */}
+          <section className="py-24 bg-white">
+            <div className="container-custom">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <motion.div 
+                  className="flex flex-col justify-center"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInRight}
+                >
+                  <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
+                    The media landscape has changed. Have your consultants?
+                  </h2>
+                  
+                  <motion.ul 
+                    className="space-y-6 mb-10"
+                    variants={staggerChildren}
+                  >
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">Only 20%</span>
+                        <span className="text-gray-600">of TV viewership now comes from broadcast.</span>
+                      </div>
+                    </motion.li>
+                    
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">Cable viewership</span>
+                        <span className="text-gray-600">dropped <strong>12.5%</strong> year over year.</span>
+                      </div>
+                    </motion.li>
+                    
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">Streaming</span>
+                        <span className="text-gray-600">now represents <strong>nearly 40%</strong> of all TV usage.</span>
+                      </div>
+                    </motion.li>
+                    
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">Major providers</span>
+                        <span className="text-gray-600">like Comcast and Charter lost <strong>743,000 subscribers</strong> in one quarter.</span>
+                      </div>
+                    </motion.li>
+                  </motion.ul>
+                  
+                  <p className="text-lg text-gray-700 mb-8">
+                    Your message is only as effective as where—and how—it's delivered. We help campaigns cut through outdated tactics and reach voters where they are.
+                  </p>
+                  
+                  <Button 
+                    variant="outline" 
+                    className="text-primary-dark-blue border-primary-dark-blue/30 hover:bg-primary-dark-blue/5 w-fit"
+                  >
+                    Watch the video
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </motion.div>
+                
+                <motion.div 
+                  className="bg-gray-200 rounded-xl aspect-video flex items-center justify-center shadow-lg"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInLeft}
+                >
+                  <div className="text-gray-400 flex flex-col items-center">
+                    <ArrowRight className="h-16 w-16 mb-4" />
+                    <span className="text-lg">[Video placeholder: autoplay muted with play icon overlay]</span>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+          
+          {/* SECTION 3: Problems Campaigns Face */}
+          <section className="py-24 bg-gray-50">
+            <div className="container-custom">
+              <motion.div 
+                className="text-center mb-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Why most campaigns fall short
+                </h2>
+              </motion.div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div 
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <Users className="h-8 w-8 text-primary-dark-blue" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Disconnected strategy</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Too many campaigns rely on a patchwork of vendors. Your digital, mail, and creative consultants operate in silos—and it shows. Fees stack up, messaging fragments, and decisions often reflect vendor incentives, not voter outcomes.
+                  </p>
+                </motion.div>
+                
+                <motion.div 
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
+                >
+                  <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <FileText className="h-8 w-8 text-primary-dark-blue" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Legacy tactics</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Political strategy too often relies on past wins. But voter behavior and media usage have shifted dramatically. You need more than a historic playbook—you need new systems built for now.
+                  </p>
+                </motion.div>
+                
+                <motion.div 
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, delay: 0.2 }}
+                >
+                  <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Siloed thinking</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Campaigns often restart from scratch, with no transfer of knowledge across cycles. We bring in tested systems from modern marketing and communications to close that gap and keep your team on track.
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+          
+          {/* SECTION 4: How We Help */}
+          <section className="py-24 bg-white">
+            <div className="container-custom">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
-                  className="relative"
+                  variants={fadeInRight}
                 >
-                  <img 
-                    src="/lovable-uploads/a47949c9-3ba7-4d0b-9b73-a5bb95c3deb5.png" 
-                    alt="Campaign team at work" 
-                    className="rounded-xl shadow-lg" 
-                  />
-                  <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-primary-cyan-blue/20 backdrop-blur-sm z-[-1]"></div>
-                  <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-primary-dark-blue/20 backdrop-blur-sm z-[-1]"></div>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                    Built by campaigners. Informed by real-world strategy.
+                  </h2>
+                  <div className="space-y-6 text-lg text-gray-700">
+                    <p>
+                      We've worked as candidates, campaign managers, comms staff, field directors, and more. After a decade of experience—and frustration with the same structural issues—we formed Veteran Campaigns.
+                    </p>
+                    <p>
+                      We also bring in tools and thinking from adjacent industries. From influencer marketing to strategic consulting, our team combines campaign experience with private-sector speed.
+                    </p>
+                    <p>
+                      With us, your communications strategy becomes one system: unified, trackable, and purpose-built.
+                    </p>
+                  </div>
                 </motion.div>
                 
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  variants={fadeIn}
-                  className="space-y-8"
+                  variants={fadeInLeft}
                 >
-                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-                    We connect <span className="text-primary-dark-blue">causes</span> to <span className="text-primary-dark-blue">communities</span>.
-                  </h2>
-                  <h3 className="text-2xl text-gray-700">
-                    Strategy and execution, working together from day one.
-                  </h3>
-                  <div className="space-y-6 text-gray-600">
-                    <p className="text-lg leading-relaxed">
-                      We've worked inside campaigns and advocacy groups. We've managed moments when budgets are tight, timelines are shorter than they should be, and everything rides on whether the message lands.
-                    </p>
-                    <p className="text-lg leading-relaxed">
-                      Veteran Campaigns brings that experience to every engagement. Our work is grounded in audience insight, creative discipline, and partnership that reflects the pace of a real campaign.
-                    </p>
+                  <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                    <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                    <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
+                      You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look like it does?
+                    </blockquote>
                   </div>
                 </motion.div>
               </div>
             </div>
           </section>
           
-          {/* SECTION 4: What We Offer */}
-          <section className="py-20 bg-primary-dark-blue text-white">
+          {/* SECTION 5: Integrating Mail + Digital */}
+          <section className="py-24 bg-gradient-to-r from-blue-50 to-gray-50">
             <div className="container-custom">
               <motion.div 
-                className="max-w-5xl mx-auto text-center mb-16"
+                className="text-center mb-16"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                  Full-service communications with a campaigner's mindset.
+                <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                  It's not either-or. It's everything working together.
                 </h2>
-                <h3 className="text-xl md:text-2xl mb-12 text-blue-100">
-                  Four capabilities, one integrated team.
-                </h3>
+                <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                  Successful campaigns don't choose between direct mail and digital—they combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
+                </p>
               </motion.div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                {/* Digital Communications */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="bg-white p-8 rounded-xl shadow-md relative overflow-hidden group"
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <Card className="bg-white/10 backdrop-blur-sm border-none overflow-hidden h-full">
-                    <CardHeader className="relative">
-                      <div className="absolute -top-8 -right-8 w-24 h-24 bg-primary-cyan-blue/30 rounded-full blur-xl"></div>
-                      <Megaphone className="text-primary-cyan-blue mb-4 h-10 w-10" />
-                      <CardTitle className="text-2xl text-white">Digital Communications</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="mb-6 text-blue-100">
-                        We build digital programs that cut through noise and meet people where they already are. From short-form to search, we help you plan, produce, and place the content that drives engagement.
-                      </p>
-                      <div className="bg-white/10 p-5 rounded-md">
-                        <h4 className="font-medium mb-2 text-white">Wounded Warrior Project</h4>
-                        <p className="text-sm text-blue-100">
-                          Led digital advertising to support national outreach and issue advocacy. Focused on strategic placement, audience clarity, and message consistency across channels.
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
+                  <h3 className="text-xl font-bold mb-3">Unified Messaging</h3>
+                  <p className="text-gray-600">
+                    Voters should recognize your message across formats. We align your visuals, tone, and calls to action across digital and mail.
+                  </p>
                 </motion.div>
                 
-                {/* Advisory Services */}
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-white p-8 rounded-xl shadow-md relative overflow-hidden group"
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
                 >
-                  <Card className="bg-white/10 backdrop-blur-sm border-none overflow-hidden h-full">
-                    <CardHeader className="relative">
-                      <div className="absolute -top-8 -right-8 w-24 h-24 bg-primary-cyan-blue/30 rounded-full blur-xl"></div>
-                      <Target className="text-primary-cyan-blue mb-4 h-10 w-10" />
-                      <CardTitle className="text-2xl text-white">Advisory Services</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="mb-6 text-blue-100">
-                        We act as your comms partner in the room—helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
-                      </p>
-                      <div className="bg-white/10 p-5 rounded-md">
-                        <h4 className="font-medium mb-2 text-white">Sarah Keitt, HD-134</h4>
-                        <p className="text-sm text-blue-100">
-                          Advised on full-cycle communications for a successful campaign to flip a long-held Republican seat. Focused on aligning messaging across digital, field, and earned media.
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
+                  <h3 className="text-xl font-bold mb-3">Smart Sequencing</h3>
+                  <p className="text-gray-600">
+                    Introduce your campaign via mail, reinforce it online, and re-engage on mobile and search. Timed right, these touches build trust and drive action.
+                  </p>
                 </motion.div>
                 
-                {/* Direct Mail */}
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-white p-8 rounded-xl shadow-md relative overflow-hidden group"
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, delay: 0.2 }}
                 >
-                  <Card className="bg-white/10 backdrop-blur-sm border-none overflow-hidden h-full">
-                    <CardHeader className="relative">
-                      <div className="absolute -top-8 -right-8 w-24 h-24 bg-primary-cyan-blue/30 rounded-full blur-xl"></div>
-                      <ArrowRight className="text-primary-cyan-blue mb-4 h-10 w-10" />
-                      <CardTitle className="text-2xl text-white">Direct Mail</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="mb-6 text-blue-100">
-                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaign's tone and timeline. Clean visuals, sharp writing, clear purpose.
-                      </p>
-                      <div className="bg-white/10 p-5 rounded-md">
-                        <h4 className="font-medium mb-2 text-white">Hubert Delany, CT-144</h4>
-                        <p className="text-sm text-blue-100">
-                          Helped secure victory in a special election by executing a targeted direct mail strategy focused on persuasion and turnout. Integrated with digital and field plans.
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
+                  <h3 className="text-xl font-bold mb-3">Data-Backed Strategy</h3>
+                  <p className="text-gray-600">
+                    Our analytics systems sync across platforms. What we learn from digital informs what we send by mail, and vice versa.
+                  </p>
                 </motion.div>
                 
-                {/* Printed Goods */}
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="bg-white p-8 rounded-xl shadow-md relative overflow-hidden group"
+                  initial="hidden"
+                  whileInView="visible"
                   viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, delay: 0.3 }}
                 >
-                  <Card className="bg-white/10 backdrop-blur-sm border-none overflow-hidden h-full">
-                    <CardHeader className="relative">
-                      <div className="absolute -top-8 -right-8 w-24 h-24 bg-primary-cyan-blue/30 rounded-full blur-xl"></div>
-                      <BarChart3 className="text-primary-cyan-blue mb-4 h-10 w-10" />
-                      <CardTitle className="text-2xl text-white">Printed Goods</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="mb-6 text-blue-100">
-                        From field materials to event signage, your print pieces should reflect the identity of your campaign. We design and deliver what your team needs in the format and style that works.
-                      </p>
-                      <div className="bg-white/10 p-5 rounded-md">
-                        <h4 className="font-medium mb-2 text-white">United Way</h4>
-                        <p className="text-sm text-blue-100">
-                          Designed and produced printed materials for community outreach efforts. Ensured visual alignment with organizational messaging and deployed on a fast timeline.
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
+                  <h3 className="text-xl font-bold mb-3">Modern Personalization</h3>
+                  <p className="text-gray-600">
+                    We tailor content to audiences. Whether it's an address or an Instagram ad, we speak to what voters care about.
+                  </p>
+                </motion.div>
+                
+                <motion.div 
+                  className="bg-white p-8 rounded-xl shadow-md relative overflow-hidden group md:col-span-2"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={scaleIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.2, delay: 0.4 }}
+                >
+                  <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
+                  <h3 className="text-xl font-bold mb-3">Multi-Channel Efficiency</h3>
+                  <p className="text-gray-600">
+                    With broadcast shrinking and cable down double digits year-over-year, your dollars go further when your strategy works across formats.
+                  </p>
                 </motion.div>
               </div>
             </div>
           </section>
           
-          {/* SECTION 5: Final Section */}
-          <section className="py-24 container-custom">
-            <div className="max-w-4xl mx-auto">
+          {/* SECTION 6: Service Offerings */}
+          <section className="py-24 bg-white">
+            <div className="container-custom">
               <motion.div 
+                className="text-center mb-16"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
-                  2026 is different.<br /> 
-                  <span className="text-primary-dark-blue">Run a campaign that shows it.</span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  What we offer
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-600 mb-16">
-                  <p className="text-lg leading-relaxed">
-                    We've helped candidates break through. We've led digital campaigns at scale. We've built creative that reaches people and communications plans that hold up under pressure.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    2026 is a golden opportunity to make your case. Political headwinds are shifting. Voters are paying attention and ready to support a cause they believe in.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    Your campaign deserves a partner that understands how to reach them. We're not another line on the vendor list. We're your comms team.
-                  </p>
-                </div>
+                <p className="text-xl text-gray-700">
+                  One team. Four integrated capabilities.
+                </p>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative mx-auto my-20"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-dark-blue/10 to-primary-cyan-blue/10 rounded-2xl transform -rotate-1"></div>
-                <div className="text-center py-14 px-8 bg-white rounded-2xl border border-primary-dark-blue/20 shadow-lg relative">
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-6">Let's talk about what your district needs.</h3>
-                  <p className="font-medium text-primary-dark-blue text-xl mb-8">info@veterancampaigns.com</p>
-                  <Button 
-                    className="bg-primary-dark-blue hover:bg-primary-dark-blue/90 text-white px-10 py-7 h-auto text-xl rounded-lg"
-                    onClick={() => window.location.href = "mailto:info@veterancampaigns.com"}
-                  >
-                    Contact Us
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                  <p className="mt-6 text-gray-600">We'll meet you where you are, and help take it from there.</p>
-                </div>
-              </motion.div>
-              
-              <div className="text-center text-gray-500 mt-20">
-                <p className="text-xl font-medium italic">We connect causes to communities.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <ArrowRight className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Digital Communications</h3>
+                      <p className="text-gray-600">
+                        Full-funnel strategy and creative—from social to search to CTV.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Digital Communications</h4>
+                      <p className="text-sm text-gray-600">
+                        We build digital programs that cut through noise and meet people where they already are. From short-form to search, we help you plan, produce, and place the content that drives engagement.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+                
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <Users className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Advisory Services</h3>
+                      <p className="text-gray-600">
+                        We help you plan, message, and adjust in real time.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Advisory Services</h4>
+                      <p className="text-sm text-gray-600">
+                        We act as your comms partner in the room—helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+                
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <FileText className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Direct Mail</h3>
+                      <p className="text-gray-600">
+                        Targeted, persuasive, and aligned with your broader message.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Direct Mail</h4>
+                      <p className="text-sm text-gray-600">
+                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaign's tone and timeline. Clean visuals, sharp writing, clear purpose.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+                
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3, delay: 0.3 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Printed Goods</h3>
+                      <p className="text-gray-600">
+                        From signs to canvasser kits—we design materials that last.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Printed Goods</h4>
+                      <p className="text-sm text-gray-600">
+                        From field materials to event signage, your print pieces should reflect the identity of your campaign. We design and deliver what your team needs in the format and style that works.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
               </div>
+            </div>
+          </section>
+          
+          {/* SECTION 7: Case Studies */}
+          <section className="py-24 bg-gray-50">
+            <div className="container-custom">
+              <motion.div 
+                className="text-center mb-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  Proof in the field
+                </h2>
+              </motion.div>
+              
+              <div className="space-y-16">
+                {/* Case Study 1 */}
+                <motion.div 
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeIn}
+                >
+                  <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
+                    <span className="text-gray-600 text-lg">[Case study image placeholder]</span>
+                  </div>
+                  <div>
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-2xl md:text-3xl">Wounded Warrior Project</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-700 leading-relaxed">
+                          Built and executed a national advocacy campaign to support federal legislation. Our team developed creative, placed CTV and digital ads, and advised on stakeholder engagement across key states.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </motion.div>
+                
+                {/* Case Study 2 */}
+                <motion.div 
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeIn}
+                >
+                  <div className="order-2 lg:order-1">
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-2xl md:text-3xl">Sarah Keitt for State Rep</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-700 leading-relaxed">
+                          Helped flip one of CT's most competitive seats in 2022 by 50 votes. Ran an integrated communications program across digital, mail, web, and video. Maintained and grew the seat with another win in 2024.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center order-1 lg:order-2">
+                    <span className="text-gray-600 text-lg">[Case study image placeholder]</span>
+                  </div>
+                </motion.div>
+                
+                {/* Case Study 3 */}
+                <motion.div 
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeIn}
+                >
+                  <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
+                    <span className="text-gray-600 text-lg">[Case study image placeholder]</span>
+                  </div>
+                  <div>
+                    <Card className="border-0 shadow-lg">
+                      <CardHeader>
+                        <CardTitle className="text-2xl md:text-3xl">United Way of Greater Fairfield County</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-700 leading-relaxed">
+                          Designed and deployed a community-wide communications strategy. From CTV ad production to digital targeting and creative support, we helped United Way connect their message to the people who needed it most.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+          
+          {/* SECTION 8: CTA + Contact */}
+          <section className="py-24 bg-white">
+            <div className="container-custom">
+              <motion.h2 
+                className="text-4xl md:text-5xl font-bold mb-16 text-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                We're ready to help your message break through
+              </motion.h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <motion.div 
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInRight}
+                >
+                  <div className="space-y-10">
+                    <div className="flex items-center space-x-6">
+                      <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center">
+                        <span className="text-gray-500">[Photo]</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold">Noah Frank</h3>
+                        <p className="text-gray-600 mb-2">Head of Projects</p>
+                        <a 
+                          href="mailto:noah@veterancampaigns.com" 
+                          className="text-primary-dark-blue hover:underline flex items-center"
+                        >
+                          ✉️ noah@veterancampaigns.com
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-6">
+                      <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center">
+                        <span className="text-gray-500">[Photo]</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold">Andrew Gausepohl</h3>
+                        <p className="text-gray-600 mb-2">Head of Digital</p>
+                        <a 
+                          href="mailto:andrew@veterancampaigns.com" 
+                          className="text-primary-dark-blue hover:underline flex items-center"
+                        >
+                          ✉️ andrew@veterancampaigns.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInLeft}
+                  className="bg-primary-dark-blue/5 p-10 rounded-2xl"
+                >
+                  <p className="text-gray-700 text-lg mb-10 leading-relaxed">
+                    Veteran Campaigns works with a limited number of campaigns each cycle so we can move fast and stay focused. If you're running in a competitive district and need a comms partner who understands how to win now—get in touch.
+                  </p>
+                  
+                  <div className="flex flex-col space-y-4">
+                    <Button 
+                      className="flex items-center bg-white border border-gray-300 hover:bg-gray-50 text-primary-dark-blue shadow-sm rounded-lg"
+                    >
+                      <FileText className="mr-2 h-5 w-5" /> 
+                      Download our capabilities brochure
+                    </Button>
+                    
+                    <Link 
+                      to="/past-work" 
+                      className="flex items-center justify-center p-3 text-primary-dark-blue hover:underline"
+                    >
+                      <ArrowRight className="mr-2 h-5 w-5" /> 
+                      Explore more case studies
+                    </Link>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+          
+          {/* Final CTA */}
+          <section className="py-16 bg-primary-dark-blue/10">
+            <div className="container-custom text-center">
+              <motion.div 
+                className="max-w-3xl mx-auto"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <h2 className="text-3xl font-bold mb-6">Let's talk about what your district needs.</h2>
+                <a 
+                  href="mailto:info@veterancampaigns.com"
+                  className="text-2xl text-primary-dark-blue font-medium mb-8 block hover:underline"
+                >
+                  info@veterancampaigns.com
+                </a>
+                <Button 
+                  size="lg" 
+                  className="bg-primary-dark-blue text-white px-8 py-7 text-lg h-auto rounded-lg shadow-lg hover:bg-primary-dark-blue/90 transition-all"
+                  onClick={() => window.location.href = "mailto:info@veterancampaigns.com"}
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <p className="mt-6 text-gray-700">We'll meet you where you are, and help take it from there.</p>
+              </motion.div>
             </div>
           </section>
         </main>
         
-        <Footer />
+        <footer className="bg-white py-8 border-t border-gray-200">
+          <div className="container-custom text-center">
+            <p className="text-xl text-gray-600 font-medium italic mb-4">We connect causes to communities.</p>
+            <p className="text-sm text-gray-500">© Veteran Media 2025 | 8 Wright Street, Suite 107, Westport, CT</p>
+          </div>
+        </footer>
       </div>
     </>
   );
