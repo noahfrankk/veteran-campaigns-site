@@ -108,12 +108,13 @@ const Ready = () => {
                   <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                     The media landscape has changed. Has your strategy?
                   </h2>
-                  
+
                   {/* UPDATED bullet points */}
                   <motion.ul 
                     className="space-y-6 mb-10"
                     variants={staggerChildren}
                   >
+                    {/* 1. Broadcast */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -123,7 +124,7 @@ const Ready = () => {
                         <span className="text-gray-600">of TV viewership now comes from broadcast.</span>
                       </div>
                     </motion.li>
-                    {/* Bullet: Streaming */}
+                    {/* 2. Streaming */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -133,7 +134,7 @@ const Ready = () => {
                         <span className="text-gray-600">now represents <strong>nearly 40%</strong> of all TV usage.</span>
                       </div>
                     </motion.li>
-                    {/* New Bullet: YouTube usage */}
+                    {/* 3. YouTube usage */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -143,7 +144,7 @@ const Ready = () => {
                         <span className="text-gray-600">of US Adults use YouTube.</span>
                       </div>
                     </motion.li>
-                    {/* New Bullet: Age 65+ */}
+                    {/* 4. People 65+ */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -168,20 +169,26 @@ const Ready = () => {
                   </Button>
                 </motion.div>
 
-                {/* VIDEO: Replacing placeholder with real video embed from homepage */}
+                {/* VIDEO: 1:1 aspect ratio as on Index page, with correct embed and subtext */}
                 <motion.div 
-                  className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-video justify-center shadow-lg p-8"
+                  className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-square justify-center shadow-lg p-8"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeInLeft}
                 >
                   <div className="w-full flex justify-center items-center">
-                    {/* You can adjust the embed below if there's a dedicated VideoSection component, but copying from Index page */}
                     <iframe
                       width="100%"
-                      height="360"
-                      style={{ maxWidth: "540px", aspectRatio: "1/1", borderRadius: "1rem", background: "#fff" }}
+                      height="100%"
+                      style={{
+                        maxWidth: "540px",
+                        aspectRatio: "1 / 1",
+                        borderRadius: "1rem",
+                        background: "#fff",
+                        minHeight: "320px",
+                        minWidth: "320px"
+                      }}
                       src="https://www.youtube.com/embed/0Ky3Igl0mco"
                       title="The Wilderness - The Voter's Mindset & Why Media Has Changed"
                       frameBorder="0"
