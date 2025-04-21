@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import HeroImageSlider from "./HeroImageSlider";
 
 const HeroSection: React.FC = () => {
@@ -41,13 +42,13 @@ const HeroSection: React.FC = () => {
               >
                 Get In Touch
               </button>
-              <div 
-                className="btn-secondary text-center w-full sm:w-auto cursor-default"
-                aria-label="Past work coming soon"
+              <Link 
+                to="/past-work"
+                className="btn-secondary text-center w-full sm:w-auto"
+                aria-label="View Past Work"
               >
                 Past Work
-                <span className="ml-2 text-xs text-gray-500">(Coming Soon)</span>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center lg:justify-end relative z-20">
