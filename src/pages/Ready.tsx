@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -108,7 +107,7 @@ const Ready = () => {
                   <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                     The media landscape has changed. Has your strategy?
                   </h2>
-
+                  
                   {/* UPDATED bullet points */}
                   <motion.ul 
                     className="space-y-6 mb-10"
@@ -157,7 +156,7 @@ const Ready = () => {
                   </motion.ul>
                   
                   <p className="text-lg text-gray-700 mb-8">
-                    Your message is only as effective as where—and how—it's delivered. We help campaigns cut through outdated tactics and reach voters where they are.
+                    Your message is only as effective as where and how it's delivered. We help you cut through outdated tactics and reach voters where they are.
                   </p>
                   
                   <Button 
@@ -169,7 +168,7 @@ const Ready = () => {
                   </Button>
                 </motion.div>
 
-                {/* VIDEO: 1:1 aspect ratio as on Index page, with correct embed and subtext */}
+                {/* VIDEO: 1:1 aspect ratio YouTube Shorts embed */}
                 <motion.div 
                   className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-square justify-center shadow-lg p-8"
                   initial="hidden"
@@ -187,10 +186,10 @@ const Ready = () => {
                         borderRadius: "1rem",
                         background: "#fff",
                         minHeight: "320px",
-                        minWidth: "320px"
+                        minWidth: "320px",
                       }}
-                      src="https://www.youtube.com/embed/0Ky3Igl0mco"
-                      title="The Wilderness - The Voter's Mindset & Why Media Has Changed"
+                      src="https://www.youtube.com/embed/C3mOVWNJHa8?autoplay=0"
+                      title="The Wilderness - The Voter's Mindset & Why Media Has Changed - YouTube Shorts"
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen
