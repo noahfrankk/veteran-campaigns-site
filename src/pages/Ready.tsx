@@ -373,15 +373,21 @@ const Ready = () => {
                 </div>
               </motion.div>
               
-              <div className="lg:col-span-1">
-                <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
+              <motion.div 
+                className="lg:sticky lg:top-24"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative h-full">
                   <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
                   <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
                   <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
                     You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
                   </blockquote>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </section>
           
