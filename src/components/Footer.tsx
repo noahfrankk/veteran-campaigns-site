@@ -1,7 +1,15 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="py-12 bg-[#1a2a3a] text-white">
       <div className="container-custom">
@@ -24,17 +32,15 @@ const Footer: React.FC = () => {
             <Link to="/past-work" className="hover:text-primary-cyan-blue text-gray-200">
               Past Clients
             </Link>
-            <a href="#contact" className="hover:text-primary-cyan-blue text-gray-200">
-              Get In Touch
-            </a>
-            <a 
-              href="https://www.veteranmedia.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-primary-cyan-blue text-gray-200"
+            <button 
+              onClick={scrollToContact}
+              className="hover:text-primary-cyan-blue text-gray-200 text-left"
             >
+              Get In Touch
+            </button>
+            <span className="text-gray-200">
               Veteran Media
-            </a>
+            </span>
             <Link to="/privacy-policy" className="hover:text-primary-cyan-blue text-gray-200">
               Privacy Policy
             </Link>
