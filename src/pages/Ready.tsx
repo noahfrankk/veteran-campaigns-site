@@ -201,8 +201,8 @@ const Ready = () => {
             </div>
           </section>
 
-          {/* SECTION 3: Problems Campaigns Face */}
-          <section className="py-24 bg-gray-50">
+          {/* SECTION 3: What We Offer */}
+          <section className="py-24 bg-white">
             <div className="container-custom">
               <motion.div 
                 className="text-center mb-16"
@@ -211,65 +211,134 @@ const Ready = () => {
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Why most campaigns fall short
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  What we offer
                 </h2>
+                <p className="text-xl text-gray-700">
+                  One team. Four integrated capabilities.
+                </p>
               </motion.div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <motion.div 
-                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={scaleIn}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <Users className="h-8 w-8 text-primary-dark-blue" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Disconnected strategy</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Too many campaigns rely on a patchwork of vendors. Your digital, mail, and creative consultants operate in silos—and it shows. Fees stack up, messaging fragments, and decisions often reflect vendor incentives, not voter outcomes.
-                  </p>
-                </motion.div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <Users className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Advisory Services</h3>
+                      <p className="text-gray-600">
+                        We help you plan, message, and adjust in real time.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Advisory Services</h4>
+                      <p className="text-sm text-gray-600">
+                        We act as your comms partner in the room—helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
                 
-                <motion.div 
-                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={scaleIn}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
-                >
-                  <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <FileText className="h-8 w-8 text-primary-dark-blue" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Legacy tactics</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Political strategy too often relies on past wins. But voter behavior and media usage have shifted dramatically. You need more than a historic playbook—you need new systems built for now.
-                  </p>
-                </motion.div>
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <ArrowRight className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Digital Advertising</h3>
+                      <p className="text-gray-600">
+                        Full-funnel strategy, creative, and execution from search to CTV.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Digital Advertising</h4>
+                      <p className="text-sm text-gray-600">
+                        We build digital programs that cut through noise and meet people where they already are. From short-form to search, we help you plan, produce, and place the content that drives engagement.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
                 
-                <motion.div 
-                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={scaleIn}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2, delay: 0.2 }}
-                >
-                  <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Siloed thinking</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Campaigns often restart from scratch, with no transfer of knowledge across cycles. We bring in tested systems from modern marketing and communications to close that gap and keep your team on track.
-                  </p>
-                </motion.div>
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <FileText className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Direct Mail</h3>
+                      <p className="text-gray-600">
+                        Targeted, persuasive, and aligned with your broader message.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Direct Mail</h4>
+                      <p className="text-sm text-gray-600">
+                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaign's tone and timeline. Clean visuals, sharp writing, clear purpose.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+                
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <motion.div 
+                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={scaleIn}
+                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
+                      transition={{ duration: 0.3, delay: 0.3 }}
+                    >
+                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Printed Goods</h3>
+                      <p className="text-gray-600">
+                        From signs to canvasser kits, we deliver materials that make an impact.
+                      </p>
+                    </motion.div>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-80 p-6">
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold">Printed Goods</h4>
+                      <p className="text-sm text-gray-600">
+                        From field materials to event signage, your print pieces should reflect the identity of your campaign. We design and deliver what your team needs in the format and style that works.
+                      </p>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
               </div>
             </div>
           </section>
@@ -420,149 +489,7 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* SECTION 6: Service Offerings */}
-          <section className="py-24 bg-white">
-            <div className="container-custom">
-              <motion.div 
-                className="text-center mb-16"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  What we offer
-                </h2>
-                <p className="text-xl text-gray-700">
-                  One team. Four integrated capabilities.
-                </p>
-              </motion.div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <motion.div 
-                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={scaleIn}
-                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <ArrowRight className="h-8 w-8 text-primary-dark-blue" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Digital Communications</h3>
-                      <p className="text-gray-600">
-                        Full-funnel strategy and creative—from social to search to CTV.
-                      </p>
-                    </motion.div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-80 p-6">
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Digital Communications</h4>
-                      <p className="text-sm text-gray-600">
-                        We build digital programs that cut through noise and meet people where they already are. From short-form to search, we help you plan, produce, and place the content that drives engagement.
-                      </p>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-                
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <motion.div 
-                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={scaleIn}
-                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
-                      transition={{ duration: 0.3, delay: 0.1 }}
-                    >
-                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <Users className="h-8 w-8 text-primary-dark-blue" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Advisory Services</h3>
-                      <p className="text-gray-600">
-                        We help you plan, message, and adjust in real time.
-                      </p>
-                    </motion.div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-80 p-6">
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Advisory Services</h4>
-                      <p className="text-sm text-gray-600">
-                        We act as your comms partner in the room—helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
-                      </p>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-                
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <motion.div 
-                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={scaleIn}
-                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
-                      transition={{ duration: 0.3, delay: 0.2 }}
-                    >
-                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <FileText className="h-8 w-8 text-primary-dark-blue" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Direct Mail</h3>
-                      <p className="text-gray-600">
-                        Targeted, persuasive, and aligned with your broader message.
-                      </p>
-                    </motion.div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-80 p-6">
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Direct Mail</h4>
-                      <p className="text-sm text-gray-600">
-                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaign's tone and timeline. Clean visuals, sharp writing, clear purpose.
-                      </p>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-                
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <motion.div 
-                      className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all cursor-pointer"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={scaleIn}
-                      whileHover={{ y: -10, backgroundColor: "rgba(14, 165, 233, 0.05)" }}
-                      transition={{ duration: 0.3, delay: 0.3 }}
-                    >
-                      <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Printed Goods</h3>
-                      <p className="text-gray-600">
-                        From signs to canvasser kits—we design materials that last.
-                      </p>
-                    </motion.div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-80 p-6">
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Printed Goods</h4>
-                      <p className="text-sm text-gray-600">
-                        From field materials to event signage, your print pieces should reflect the identity of your campaign. We design and deliver what your team needs in the format and style that works.
-                      </p>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-              </div>
-            </div>
-          </section>
-          
-          {/* SECTION 7: Case Studies */}
+          {/* SECTION 6: Case Studies */}
           <section className="py-24 bg-gray-50">
             <div className="container-custom">
               <motion.div 
@@ -656,7 +583,7 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* SECTION 8: CTA + Contact */}
+          {/* SECTION 7: CTA + Contact */}
           <section className="py-24 bg-white">
             <div className="container-custom">
               <motion.h2 
