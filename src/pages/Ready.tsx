@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/card";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import ReadyHeroSection from "../components/ReadyHeroSection";
+import { useNavigate } from "react-router-dom"; // Needed for navigation
 
 const Ready = () => {
   const fadeIn = {
@@ -74,6 +75,18 @@ const Ready = () => {
   const scrollToNextSection = () => {
     if (nextSectionRef.current) {
       nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navigate = useNavigate();
+
+  // Utility function to scroll to contact form
+  const handleContactClick = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/#contact");
     }
   };
 
@@ -478,6 +491,7 @@ const Ready = () => {
             </div>
           </section>
           
+          {/* === PROOF OF OUR IMPACT Section === */}
           <section className="py-24 bg-gray-50">
             <div className="container-custom">
               <motion.div 
@@ -493,6 +507,8 @@ const Ready = () => {
               </motion.div>
               
               <div className="space-y-16">
+
+                {/* Wounded Warrior Project */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -502,6 +518,7 @@ const Ready = () => {
                 >
                   <div className="flex items-center justify-center">
                     <div className="relative w-full max-w-lg">
+                      {/* MacBook Pro with WWP graphic */}
                       <img
                         src="/lovable-uploads/1498050108023-c5249f4df085.jpg"
                         alt="MacBook Pro"
@@ -530,6 +547,7 @@ const Ready = () => {
                   </div>
                 </motion.div>
                 
+                {/* Sarah Keitt for State Rep */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -560,6 +578,7 @@ const Ready = () => {
                   </div>
                 </motion.div>
                 
+                {/* ANDD */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -672,6 +691,7 @@ const Ready = () => {
                   <div className="flex flex-col space-y-4">
                     <Button 
                       className="flex items-center bg-white border border-gray-300 hover:bg-gray-50 text-primary-dark-blue shadow-sm rounded-lg"
+                      onClick={() => navigate("/past-work")}
                     >
                       <FileText className="mr-2 h-5 w-5" />
                       See more examples of our work
@@ -679,9 +699,10 @@ const Ready = () => {
                     
                     <Button 
                       className="flex items-center bg-primary-dark-blue text-white hover:bg-primary-dark-blue/90 shadow-sm rounded-lg"
+                      onClick={handleContactClick}
                     >
                       <span className="mr-2">✉️</span>
-                      Send Us a Message
+                      Send us a message
                     </Button>
                   </div>
                 </motion.div>
