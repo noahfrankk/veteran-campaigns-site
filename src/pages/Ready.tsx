@@ -359,13 +359,13 @@ const Ready = () => {
                   </h2>
                   <div className="space-y-6 text-lg text-gray-700">
                     <p>
-                      We've worked as candidates, campaign managers, comms staff, field directors, and more. After a decade of experience—and frustration with the same structural issues—we formed Veteran Campaigns.
+                      We've worked as candidates, campaign managers, comms staff, field directors, and more. After a decade of experience and frustration with the same structural issues, we formed Veteran Campaigns.
                     </p>
                     <p>
                       We also bring in tools and thinking from adjacent industries. From influencer marketing to strategic consulting, our team combines campaign experience with private-sector speed.
                     </p>
                     <p>
-                      With us, your communications strategy becomes one system: unified, trackable, and purpose-built.
+                      With us, your communications strategy becomes one system: unified, trackable, and purpose built.
                     </p>
                   </div>
                 </motion.div>
@@ -402,7 +402,7 @@ const Ready = () => {
                   It's not either-or. It's everything working together.
                 </h2>
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                  Successful campaigns don't choose between direct mail and digital—they combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
+                  Successful campaigns don't choose between direct mail and digital, they combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
                 </p>
               </motion.div>
               
@@ -435,7 +435,7 @@ const Ready = () => {
                   <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
                   <h3 className="text-xl font-bold mb-3">Smart Sequencing</h3>
                   <p className="text-gray-600">
-                    Introduce your campaign via mail, reinforce it online, and re-engage on mobile and search. Timed right, these touches build trust and drive action.
+                    Introduce your campaign via mail, reinforce it online, and re engage on mobile and search. Timed right, these touches build trust and drive action.
                   </p>
                 </motion.div>
                 
@@ -483,7 +483,7 @@ const Ready = () => {
                   <div className="absolute top-0 left-0 h-full w-1 bg-primary-dark-blue"></div>
                   <h3 className="text-xl font-bold mb-3">Multi-Channel Efficiency</h3>
                   <p className="text-gray-600">
-                    With broadcast shrinking and cable down double digits year-over-year, your dollars go further when your strategy works across formats.
+                    With broadcast shrinking and cable down double digits year over year, your dollars go further when your strategy works across formats.
                   </p>
                 </motion.div>
               </div>
@@ -647,7 +647,7 @@ const Ready = () => {
                   className="bg-primary-dark-blue/5 p-10 rounded-2xl"
                 >
                   <p className="text-gray-700 text-lg mb-10 leading-relaxed">
-                    Veteran Campaigns works with a limited number of campaigns each cycle so we can move fast and stay focused. If you're running in a competitive district and need a comms partner who understands how to win now—get in touch.
+                    Veteran Campaigns works with a limited number of campaigns each cycle so we can move fast and stay focused. If you're running in a competitive district and need a comms partner who understands how to win nowget in touch.
                   </p>
                   
                   <div className="flex flex-col space-y-4">
