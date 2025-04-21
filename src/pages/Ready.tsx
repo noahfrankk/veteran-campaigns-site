@@ -348,7 +348,7 @@ const Ready = () => {
           <section className="py-24 bg-white">
             <div className="container-custom">
               <motion.div 
-                className="text-center mb-16"
+                className="text-left"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -373,18 +373,13 @@ const Ready = () => {
                 </div>
               </motion.div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div className="lg:col-span-1 order-2 lg:order-1">
-                  {/* Content column - leave empty for layout */}
-                </div>
-                <div className="lg:col-span-1 order-1 lg:order-2">
-                  <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
-                    <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                    <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                    <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
-                      You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
-                    </blockquote>
-                  </div>
+              <div className="lg:col-span-1">
+                <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
+                  <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                  <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                  <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
+                    You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
+                  </blockquote>
                 </div>
               </div>
             </div>
@@ -400,7 +395,7 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                  <span className="text-black">It's not either or. It's everything </span>
+                  Good strategy isn't either or. It's everything{" "}
                   <span className="gradient-text">working together.</span>
                 </h2>
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -51,22 +50,22 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
           variants={fadeIn}
         >
           {/* HERO HEADER, no hanging "win" */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight break-words">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight break-words">
             We build smart, unified communications strategy to reach voters and{" "}
             <span className="gradient-text whitespace-nowrap">win.</span>
           </h1>
 
           {/* Sub text, no em dash, max width, no background copy */}
-          <p className="text-lg md:text-xl mb-12 text-gray-800 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base md:text-lg mb-10 text-gray-800 leading-relaxed max-w-2xl mx-auto">
             Most campaigns struggle to get their message to the right people, in the right format, at the right time. Veteran Campaigns connects causes to communities with strategy and creative built for how people actually communicate today, not just what worked last cycle.
           </p>
           <Button
-            size="lg"
-            className="bg-primary-dark-blue text-white px-8 py-7 text-lg h-auto rounded-lg shadow-lg hover:bg-primary-dark-blue/90 transition-all"
+            size="default"
+            className="bg-primary-dark-blue text-white px-6 py-5 text-base h-auto rounded-lg shadow-lg hover:bg-primary-dark-blue/90 transition-all"
             onClick={onScrollToNextSection}
           >
             See how the landscape has changed
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </motion.div>
       </div>
