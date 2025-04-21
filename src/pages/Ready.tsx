@@ -501,12 +501,12 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  Proof in the field
+                  Proof of our impact
                 </h2>
               </motion.div>
               
               <div className="space-y-16">
-                {/* Case Study 1 */}
+                {/* Case Study 1: Wounded Warrior Project */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -514,8 +514,24 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeIn}
                 >
-                  <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
-                    <span className="text-gray-600 text-lg">[Case study image placeholder]</span>
+                  {/* MacBook Pro mockup with WWP image */}
+                  <div className="flex items-center justify-center">
+                    <div className="relative w-full max-w-lg">
+                      {/* MacBook Pro frame */}
+                      <img
+                        src="/lovable-uploads/1498050108023-c5249f4df085.jpg"
+                        alt="MacBook Pro"
+                        className="w-full h-auto rounded-2xl border shadow-lg"
+                        style={{ background: "#222" }}
+                      />
+                      {/* WWP Screenshot Overlay */}
+                      <img
+                        src="/lovable-uploads/92d624da-7828-4abd-897b-2eeac1a5b735.png"
+                        alt="Wounded Warrior Project site"
+                        className="absolute left-[9%] top-[12%] w-[82%] h-[65%] object-cover rounded-[10px] shadow-md"
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
                   </div>
                   <div>
                     <Card className="border-0 shadow-lg">
@@ -524,14 +540,14 @@ const Ready = () => {
                       </CardHeader>
                       <CardContent>
                         <p className="text-gray-700 leading-relaxed">
-                          Built and executed a national advocacy campaign to support federal legislation. Our team developed creative, placed CTV and digital ads, and advised on stakeholder engagement across key states.
+                          Executed a national campaign to pressure lawmakers on urgent legislation; our team continues to work as a trusted Wounded Warrior Project partner.
                         </p>
                       </CardContent>
                     </Card>
                   </div>
                 </motion.div>
                 
-                {/* Case Study 2 */}
+                {/* Case Study 2: Sarah Keitt for State Rep */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -546,17 +562,24 @@ const Ready = () => {
                       </CardHeader>
                       <CardContent>
                         <p className="text-gray-700 leading-relaxed">
-                          Helped flip one of CT's most competitive seats in 2022 by 50 votes. Ran an integrated communications program across digital, mail, web, and video. Maintained and grew the seat with another win in 2024.
+                          Ran a fully integrated campaign combining digital, mail, video, and web strategy to deliver an upset victory by 14 votes in 2022!  Building on that momentum, we expanded support and secured a win by over 4 points in 2024.
                         </p>
                       </CardContent>
                     </Card>
                   </div>
+                  {/* Replace placeholder with Sarah Keitt image if available, else keep placeholder */}
                   <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center order-1 lg:order-2">
-                    <span className="text-gray-600 text-lg">[Case study image placeholder]</span>
+                    <img
+                      src="/lovable-uploads/030a41ee-8d89-6c8989da5f5e.png"
+                      alt="Sarah Keitt Campaign"
+                      className="object-cover w-full h-full"
+                      style={{ minHeight: "200px" }}
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
                   </div>
                 </motion.div>
                 
-                {/* Case Study 3 */}
+                {/* Case Study 3: ANDD */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -564,17 +587,24 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeIn}
                 >
+                  {/* Show ANDD house deck image, fallback to placeholder if missing */}
                   <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
-                    <span className="text-gray-600 text-lg">[Case study image placeholder]</span>
+                    <img
+                      src="/lovable-uploads/1113947f-0110-44b6-b131-619a3e1e1a55.png"
+                      alt="ANDD House Deck"
+                      className="object-cover w-full h-full"
+                      style={{ minHeight: "200px" }}
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
                   </div>
                   <div>
                     <Card className="border-0 shadow-lg">
                       <CardHeader>
-                        <CardTitle className="text-2xl md:text-3xl">United Way of Greater Fairfield County</CardTitle>
+                        <CardTitle className="text-2xl md:text-3xl">ANDD</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <p className="text-gray-700 leading-relaxed">
-                          Designed and deployed a community-wide communications strategy. From CTV ad production to digital targeting and creative support, we helped United Way connect their message to the people who needed it most.
+                          Led a full rebrand of ANDD, then built the digital infrastructure and strategy to activate their base, engage the community, and drive local change.
                         </p>
                       </CardContent>
                     </Card>
