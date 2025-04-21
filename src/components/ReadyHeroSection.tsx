@@ -25,12 +25,12 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden w-full">
       {/* Background map image */}
       <div
-        className="absolute inset-0 w-full h-full z-0 bg-center bg-cover"
+        className="absolute inset-0 w-full h-full z-0"
         style={{
           backgroundImage: `url('/lovable-uploads/8f0eec87-7f23-4039-afa3-ba35e8953ce8.png')`,
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          opacity: 1, // fully visible
         }}
         aria-hidden="true"
       />
@@ -74,4 +74,3 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
 };
 
 export default ReadyHeroSection;
-
