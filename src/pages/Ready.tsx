@@ -1,3 +1,4 @@
+
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -182,7 +183,7 @@ const Ready = () => {
                       height="360"
                       style={{ maxWidth: "540px", aspectRatio: "1/1", borderRadius: "1rem", background: "#fff" }}
                       src="https://www.youtube.com/embed/0Ky3Igl0mco"
-                      title="The Wilderness - The Voter’s Mindset & Why Media Has Changed"
+                      title="The Wilderness - The Voter's Mindset & Why Media Has Changed"
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen
@@ -722,4 +723,27 @@ const Ready = () => {
                     <Button 
                       className="flex items-center bg-white border border-gray-300 hover:bg-gray-50 text-primary-dark-blue shadow-sm rounded-lg"
                     >
-                      <FileText className="mr-2 h-5 w-5"
+                      <FileText className="mr-2 h-5 w-5" />
+                      Schedule a Call
+                    </Button>
+                    
+                    <Button 
+                      className="flex items-center bg-primary-dark-blue text-white hover:bg-primary-dark-blue/90 shadow-sm rounded-lg"
+                    >
+                      <span className="mr-2">✉️</span>
+                      Send Us a Message
+                    </Button>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default Ready;
