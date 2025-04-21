@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
@@ -22,7 +22,6 @@ import {
 } from "@/components/ui/card";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import ReadyHeroSection from "../components/ReadyHeroSection";
-import { useNavigate } from "react-router-dom";
 
 const Ready = () => {
   const fadeIn = {
@@ -102,7 +101,7 @@ const Ready = () => {
         <main className="flex-grow">
           <ReadyHeroSection onScrollToNextSection={scrollToNextSection} />
 
-          <section ref={nextSectionRef} className="py-24 bg-white">
+          <section className="py-24 bg-white">
             <div className="container-custom">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <motion.div
@@ -348,43 +347,38 @@ const Ready = () => {
           
           <section className="py-24 bg-white">
             <div className="container-custom">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <motion.div 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeInRight}
-                >
-                  <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                    Built by campaigners. Informed by real world strategy.
-                  </h2>
-                  <div className="space-y-6 text-lg text-gray-700">
-                    <p>
-                      Our team has experience as candidates, campaign managers, communications staff, and field directors. We came together to solve the recurring challenges every election cycle and provide campaigns with the support we always wanted ourselves.
-                    </p>
-                    <p>
-                      In addition to deep campaign backgrounds, our team brings in perspectives and tools from other industries, such as influencer marketing and strategic consulting. We blend public campaign experience with fast, effective methods borrowed from the private sector.
-                    </p>
-                    <p>
-                      With Veteran Campaigns, you get one unified communications system—everything you need in one place, with results you can measure.
-                    </p>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeInLeft}
-                >
-                  <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
-                    <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                    <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                    <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
-                      You do not organize, vote, or talk like it is 2008. So why would your campaign strategy look the same?
-                    </blockquote>
-                  </div>
-                </motion.div>
+              <motion.div 
+                className="text-center mb-16"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+              >
+                <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                  Built by campaigners. Informed by{" "}
+                  <span className="gradient-text">
+                    real world strategy.
+                  </span>
+                </h2>
+                <div className="space-y-6 text-lg text-gray-700">
+                  <p>
+                    Our team has experience as candidates, campaign managers, communications staff, and field directors. We came together to solve the recurring challenges every election cycle and provide campaigns with the support we always wanted ourselves.
+                  </p>
+                  <p>
+                    In addition to deep campaign backgrounds, our team brings in perspectives and tools from other industries, such as influencer marketing and strategic consulting. We blend public campaign experience with fast, effective methods borrowed from the private sector.
+                  </p>
+                  <p>
+                    With Veteran Campaigns, you get one unified communications system; everything you need is in one place, with results you can measure.
+                  </p>
+                </div>
+              </motion.div>
+              
+              <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
+                <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
+                  You do not organize, vote, or talk like it is 2008. So why would your campaign strategy look the same?
+                </blockquote>
               </div>
             </div>
           </section>
@@ -399,7 +393,9 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                  It is not either or. It is everything working together.
+                  <span className="gradient-text">
+                    It is not either or. It is everything working together.
+                  </span>
                 </h2>
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                   Successful campaigns do not choose between direct mail and digital. They combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
@@ -490,7 +486,6 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* === PROOF OF OUR IMPACT Section === */}
           <section className="py-24 bg-gray-50">
             <div className="container-custom">
               <motion.div 
@@ -507,7 +502,6 @@ const Ready = () => {
               
               <div className="space-y-16">
 
-                {/* Wounded Warrior Project */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -539,7 +533,6 @@ const Ready = () => {
                   </div>
                 </motion.div>
                 
-                {/* Sarah Keitt for State Rep */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -569,7 +562,6 @@ const Ready = () => {
                   </div>
                 </motion.div>
                 
-                {/* ANDD */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -602,7 +594,6 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* Final call to action section */}
           <section className="py-24 bg-white">
             <div className="container-custom">
               <motion.h2 
@@ -613,10 +604,9 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 Ready to help your message{" "}
-                <span className="bg-gradient-to-r from-primary-dark-blue to-primary-cyan-blue bg-clip-text text-transparent">
-                  break through
+                <span className="gradient-text">
+                  break through.
                 </span>
-                .
               </motion.h2>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
