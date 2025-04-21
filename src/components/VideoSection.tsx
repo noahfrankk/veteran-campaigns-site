@@ -35,7 +35,7 @@ const VideoSection: React.FC = () => {
           <div className="order-1 lg:order-2">
             <div 
               id="intro-video"
-              className="w-full aspect-video bg-[#f5f5f5] rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-full aspect-square bg-[#f5f5f5] rounded-lg flex items-center justify-center overflow-hidden"
             >
               <iframe
                 width="100%"
@@ -47,7 +47,9 @@ const VideoSection: React.FC = () => {
                 allowFullScreen
               />
             </div>
-            <p className="text-sm text-gray-500 mt-3 italic">Our philosophy on the state of campaigns today.</p>
+            <p className="text-sm text-gray-500 mt-3 italic">
+              Our philosophy on the state of campaigns today. Don't just take it from us, take it from Jon Favreau and the excellent crew of the Wilderness Podcast.
+            </p>
           </div>
         </div>
       </div>
@@ -56,3 +58,4 @@ const VideoSection: React.FC = () => {
 };
 
 export default VideoSection;
+
