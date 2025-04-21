@@ -24,7 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/past-work" element={<PastWork />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/ready" element={<Ready />} />
+            <Route path="/strategy" element={<Ready />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
@@ -34,3 +34,4 @@ const App = () => (
 );
 
 export default App;
+
