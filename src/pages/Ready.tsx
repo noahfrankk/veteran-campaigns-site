@@ -393,9 +393,8 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                  <span className="gradient-text">
-                    It is not either or. It is everything working together.
-                  </span>
+                  <span className="text-gray-700">It's not either or. It's everything </span>
+                  <span className="gradient-text">working together.</span>
                 </h2>
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                   Successful campaigns do not choose between direct mail and digital. They combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
