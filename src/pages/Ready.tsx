@@ -108,8 +108,34 @@ const Ready = () => {
                     The media landscape has changed. Has your strategy?
                   </h2>
 
-                  {/* UPDATED bullet points */}
+                  {/* UPDATED bullet points: four total with requested formatting */}
                   <motion.ul className="space-y-6 mb-10" variants={staggerChildren}>
+                    {/* Added first two requested bullet points */}
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">Over 85%</span>
+                        <span className="text-gray-600">
+                          of US adults are regular <strong className="font-bold">YouTube</strong> users.
+                        </span>
+                      </div>
+                    </motion.li>
+
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">The majority of people 65+</span>
+                        <span className="text-gray-600">
+                          use both <strong className="font-bold">YouTube</strong> and <strong className="font-bold">Facebook</strong> today.
+                        </span>
+                      </div>
+                    </motion.li>
+
+                    {/* Re-adding the original two bullet points */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -140,7 +166,7 @@ const Ready = () => {
                   </p>
                 </motion.div>
 
-                {/* VIDEO: 1:1 aspect ratio YouTube Shorts embed */}
+                {/* VIDEO: 1:1 aspect ratio YouTube Shorts embed (updated to requested video) */}
                 <motion.div
                   className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-square justify-center shadow-lg p-8"
                   initial="hidden"
