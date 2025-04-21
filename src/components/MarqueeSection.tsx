@@ -14,13 +14,13 @@ const MarqueeSection: React.FC = () => {
     "/lovable-uploads/ffe6f323-ca9e-4a84-910a-fb58cb12f534.png",
     "/lovable-uploads/30e0140e-030a-41ee-8d89-6c8989da5f5e.png",
     "/lovable-uploads/32dafc41-0f1a-47ad-83b5-97a09ebfcde5.png",
-    // "/lovable-uploads/d13494e4-5ac1-403d-aee9-93fa569b37a0.png", // Removed for variety
+    "/lovable-uploads/d13494e4-5ac1-403d-aee9-93fa569b37a0.png", // Restored
     "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png",
-    // "/lovable-uploads/fd0fd64b-8598-4f15-9d7c-dc72710dfd6d.png", // Removed for variety
+    "/lovable-uploads/fd0fd64b-8598-4f15-9d7c-dc72710dfd6d.png", // Restored
     "/lovable-uploads/3dcbff83-a5c7-4f92-93c6-7927bac2d41d.png",
     "/lovable-uploads/41c2a24e-7b14-482e-9c7c-9bcfecbf8998.png",
     "/lovable-uploads/a4111b7a-e8f8-4da3-9427-6ee2acec1b4a.png",
-    // "/lovable-uploads/fa7fdb58-3ed8-48e2-a68e-216f7fdd42bc.png", // Removed for variety
+    "/lovable-uploads/fa7fdb58-3ed8-48e2-a68e-216f7fdd42bc.png", // Restored
     "/lovable-uploads/e067a27e-85d0-4044-b748-1277c38297ce.png",
   ];
 
@@ -47,7 +47,7 @@ const MarqueeSection: React.FC = () => {
             {clientLogos.map((logo, index) => (
               <div 
                 key={index} 
-                className="min-w-[200px] h-20 mx-4 flex items-center justify-center"
+                className="min-w-[240px] h-28 mx-4 flex items-center justify-center"
               >
                 <img 
                   src={logo} 
@@ -60,7 +60,7 @@ const MarqueeSection: React.FC = () => {
             {clientLogos.map((logo, index) => (
               <div 
                 key={`duplicate-${index}`} 
-                className="min-w-[200px] h-20 mx-4 flex items-center justify-center"
+                className="min-w-[240px] h-28 mx-4 flex items-center justify-center"
               >
                 <img 
                   src={logo} 

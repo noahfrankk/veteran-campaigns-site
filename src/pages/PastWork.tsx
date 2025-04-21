@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -60,7 +61,7 @@ const PastWork: React.FC = () => {
     }
   }, []);
 
-  // Add new logos and intermix with the others in past clients
+  // All 18 logos with client information
   const clientLogos = [
     {
       logo: "/lovable-uploads/4f8aacf5-765f-4fe4-af94-6ccc847c9657.png",
@@ -135,11 +136,25 @@ const PastWork: React.FC = () => {
       }
     },
     {
+      logo: "/lovable-uploads/d13494e4-5ac1-403d-aee9-93fa569b37a0.png",
+      info: {
+        name: "Pappas for Senate",
+        details: "Pappas for State Senate, CT SD-28. Fairfield County."
+      }
+    },
+    {
       logo: "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png",
       info: {
         name: "Nick Kapoor",
         details: "Kapoor for State Representative, CT HD-112. Fairfield County.",
         highlight: "Special election"
+      }
+    },
+    {
+      logo: "/lovable-uploads/fd0fd64b-8598-4f15-9d7c-dc72710dfd6d.png",
+      info: {
+        name: "Kaplan",
+        details: "Kaplan for Congress, CT-4. Fairfield County."
       }
     },
     {
@@ -162,6 +177,13 @@ const PastWork: React.FC = () => {
       info: {
         name: "Volpe",
         details: "Volpe for State Representative, CT HD-134. Fairfield County."
+      }
+    },
+    {
+      logo: "/lovable-uploads/fa7fdb58-3ed8-48e2-a68e-216f7fdd42bc.png",
+      info: {
+        name: "Hultgren",
+        details: "Hultgren for State Representative, CT HD-112. Fairfield County."
       }
     },
     {
@@ -196,7 +218,7 @@ const PastWork: React.FC = () => {
             We've worked with campaigns of all sizes. Click around to see some of the key races we've helped with.
           </p>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mb-16">
             {clientLogos.map((client, index) => (
               <HoverCard key={index}>
                 <HoverCardTrigger asChild>
