@@ -11,6 +11,7 @@ import {
   FileText,
   Users,
   Check,
+  Tv,
 } from "lucide-react";
 import { 
   Card,
@@ -202,7 +203,7 @@ const Ready = () => {
           </section>
 
           {/* SECTION 3: What We Offer */}
-          <section className="py-24 bg-white">
+          <section className="py-24 bg-[#F1F0FB]">
             <div className="container-custom">
               <motion.div 
                 className="text-center mb-16"
@@ -244,7 +245,7 @@ const Ready = () => {
                     <div className="space-y-4">
                       <h4 className="text-lg font-semibold">Advisory Services</h4>
                       <p className="text-sm text-gray-600">
-                        We act as your comms partner in the room—helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
+                        We act as your comms partner in the room helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
                       </p>
                     </div>
                   </HoverCardContent>
@@ -262,11 +263,11 @@ const Ready = () => {
                       transition={{ duration: 0.3, delay: 0.1 }}
                     >
                       <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <ArrowRight className="h-8 w-8 text-primary-dark-blue" />
+                        <Tv className="h-8 w-8 text-primary-dark-blue" />
                       </div>
                       <h3 className="text-2xl font-bold mb-4">Digital Advertising</h3>
                       <p className="text-gray-600">
-                        Full-funnel strategy, creative, and execution from search to CTV.
+                        Full funnel strategy, creative, and execution from search to CTV.
                       </p>
                     </motion.div>
                   </HoverCardTrigger>
@@ -274,7 +275,7 @@ const Ready = () => {
                     <div className="space-y-4">
                       <h4 className="text-lg font-semibold">Digital Advertising</h4>
                       <p className="text-sm text-gray-600">
-                        We build digital programs that cut through noise and meet people where they already are. From short-form to search, we help you plan, produce, and place the content that drives engagement.
+                        We build digital programs that cut through noise and meet people where they already are. From short form to search, we help you plan, produce, and place the content that drives engagement.
                       </p>
                     </div>
                   </HoverCardContent>
@@ -304,7 +305,7 @@ const Ready = () => {
                     <div className="space-y-4">
                       <h4 className="text-lg font-semibold">Direct Mail</h4>
                       <p className="text-sm text-gray-600">
-                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaign's tone and timeline. Clean visuals, sharp writing, clear purpose.
+                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaigns tone and timeline. Clean visuals, sharp writing, clear purpose.
                       </p>
                     </div>
                   </HoverCardContent>
