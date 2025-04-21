@@ -517,18 +517,11 @@ const Ready = () => {
                 >
                   <div className="flex items-center justify-center">
                     <div className="relative w-full max-w-lg">
-                      {/* MacBook Pro with WWP site inside */}
                       <img
-                        src="/lovable-uploads/1498050108023-c5249f4df085.jpg"
-                        alt="MacBook Pro"
-                        className="w-full h-auto rounded-2xl border shadow-lg"
+                        src="/lovable-uploads/26ee1184-4928-4e5c-8154-9e6daef30920.png"
+                        alt="Wounded Warrior Project"
+                        className="w-full h-auto rounded-2xl border shadow-lg object-cover"
                         style={{ background: "#222" }}
-                      />
-                      <img
-                        src="/lovable-uploads/92d624da-7828-4abd-897b-2eeac1a5b735.png"
-                        alt="Wounded Warrior Project site"
-                        className="absolute left-[9%] top-[12%] w-[82%] h-[65%] object-cover rounded-[10px] shadow-md"
-                        style={{ objectFit: "cover" }}
                       />
                     </div>
                   </div>
@@ -568,11 +561,10 @@ const Ready = () => {
                   </div>
                   <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center order-1 lg:order-2">
                     <img
-                      src="/lovable-uploads/030a41ee-8d89-6c8989da5f5e.png"
+                      src="/lovable-uploads/dc58e06b-be08-498d-ad62-e180cd7d3005.png"
                       alt="Sarah Keitt Campaign"
                       className="object-cover w-full h-full"
                       style={{ minHeight: "200px" }}
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                   </div>
                 </motion.div>
@@ -587,11 +579,10 @@ const Ready = () => {
                 >
                   <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
                     <img
-                      src="/lovable-uploads/1113947f-0110-44b6-b131-619a3e1e1a55.png"
-                      alt="ANDD House Deck"
+                      src="/lovable-uploads/b84edc2e-210a-419a-9635-57dd90d557c6.png"
+                      alt="ANDD"
                       className="object-cover w-full h-full"
                       style={{ minHeight: "200px" }}
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                   </div>
                   <div>
