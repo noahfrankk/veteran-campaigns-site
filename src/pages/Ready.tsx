@@ -103,10 +103,12 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeInRight}
                 >
+                  {/* UPDATED header */}
                   <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
-                    The media landscape has changed. Have your consultants?
+                    The media landscape has changed. Has your strategy?
                   </h2>
                   
+                  {/* UPDATED bullet points */}
                   <motion.ul 
                     className="space-y-6 mb-10"
                     variants={staggerChildren}
@@ -120,17 +122,7 @@ const Ready = () => {
                         <span className="text-gray-600">of TV viewership now comes from broadcast.</span>
                       </div>
                     </motion.li>
-                    
-                    <motion.li className="flex items-start" variants={fadeIn}>
-                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
-                        <Check className="h-5 w-5 text-primary-dark-blue" />
-                      </div>
-                      <div>
-                        <span className="block text-xl font-bold text-gray-800">Cable viewership</span>
-                        <span className="text-gray-600">dropped <strong>12.5%</strong> year over year.</span>
-                      </div>
-                    </motion.li>
-                    
+                    {/* Bullet: Streaming */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -140,14 +132,24 @@ const Ready = () => {
                         <span className="text-gray-600">now represents <strong>nearly 40%</strong> of all TV usage.</span>
                       </div>
                     </motion.li>
-                    
+                    {/* New Bullet: YouTube usage */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
                       </div>
                       <div>
-                        <span className="block text-xl font-bold text-gray-800">Major providers</span>
-                        <span className="text-gray-600">like Comcast and Charter lost <strong>743,000 subscribers</strong> in one quarter.</span>
+                        <span className="block text-xl font-bold text-gray-800">Over 85%</span>
+                        <span className="text-gray-600">of US Adults use YouTube.</span>
+                      </div>
+                    </motion.li>
+                    {/* New Bullet: Age 65+ */}
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">The majority of people 65+</span>
+                        <span className="text-gray-600">use both YouTube and Facebook.</span>
                       </div>
                     </motion.li>
                   </motion.ul>
@@ -164,23 +166,37 @@ const Ready = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </motion.div>
-                
+
+                {/* VIDEO: Replacing placeholder with real video embed from homepage */}
                 <motion.div 
-                  className="bg-gray-200 rounded-xl aspect-video flex items-center justify-center shadow-lg"
+                  className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-video justify-center shadow-lg p-8"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeInLeft}
                 >
-                  <div className="text-gray-400 flex flex-col items-center">
-                    <ArrowRight className="h-16 w-16 mb-4" />
-                    <span className="text-lg">[Video placeholder: autoplay muted with play icon overlay]</span>
+                  <div className="w-full flex justify-center items-center">
+                    {/* You can adjust the embed below if there's a dedicated VideoSection component, but copying from Index page */}
+                    <iframe
+                      width="100%"
+                      height="360"
+                      style={{ maxWidth: "540px", aspectRatio: "1/1", borderRadius: "1rem", background: "#fff" }}
+                      src="https://www.youtube.com/embed/0Ky3Igl0mco"
+                      title="The Wilderness - The Voter’s Mindset & Why Media Has Changed"
+                      frameBorder="0"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    />
                   </div>
+                  {/* Small, italicized gray subtext */}
+                  <p className="mt-4 text-sm italic text-gray-500 text-center w-full">
+                    Hear it from our friends on The Wilderness, the media landscape has changed.
+                  </p>
                 </motion.div>
               </div>
             </div>
           </section>
-          
+
           {/* SECTION 3: Problems Campaigns Face */}
           <section className="py-24 bg-gray-50">
             <div className="container-custom">
@@ -706,63 +722,4 @@ const Ready = () => {
                     <Button 
                       className="flex items-center bg-white border border-gray-300 hover:bg-gray-50 text-primary-dark-blue shadow-sm rounded-lg"
                     >
-                      <FileText className="mr-2 h-5 w-5" /> 
-                      Download our capabilities brochure
-                    </Button>
-                    
-                    <Link 
-                      to="/past-work" 
-                      className="flex items-center justify-center p-3 text-primary-dark-blue hover:underline"
-                    >
-                      <ArrowRight className="mr-2 h-5 w-5" /> 
-                      Explore more case studies
-                    </Link>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-          
-          {/* Final CTA */}
-          <section className="py-16 bg-primary-dark-blue/10">
-            <div className="container-custom text-center">
-              <motion.div 
-                className="max-w-3xl mx-auto"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
-                <h2 className="text-3xl font-bold mb-6">Let's talk about what your district needs.</h2>
-                <a 
-                  href="mailto:info@veterancampaigns.com"
-                  className="text-2xl text-primary-dark-blue font-medium mb-8 block hover:underline"
-                >
-                  info@veterancampaigns.com
-                </a>
-                <Button 
-                  size="lg" 
-                  className="bg-primary-dark-blue text-white px-8 py-7 text-lg h-auto rounded-lg shadow-lg hover:bg-primary-dark-blue/90 transition-all"
-                  onClick={() => window.location.href = "mailto:info@veterancampaigns.com"}
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <p className="mt-6 text-gray-700">We'll meet you where you are, and help take it from there.</p>
-              </motion.div>
-            </div>
-          </section>
-        </main>
-        
-        <footer className="bg-white py-8 border-t border-gray-200">
-          <div className="container-custom text-center">
-            <p className="text-xl text-gray-600 font-medium italic mb-4">We connect causes to communities.</p>
-            <p className="text-sm text-gray-500">© Veteran Media 2025 | 8 Wright Street, Suite 107, Westport, CT</p>
-          </div>
-        </footer>
-      </div>
-    </>
-  );
-};
-
-export default Ready;
+                      <FileText className="mr-2 h-5 w-5"
