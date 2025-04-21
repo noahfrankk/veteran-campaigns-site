@@ -24,7 +24,6 @@ import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/h
 import ReadyHeroSection from "../components/ReadyHeroSection";
 
 const Ready = () => {
-  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -71,7 +70,6 @@ const Ready = () => {
     }
   };
 
-  // SCROLL: Ref to the next section
   const nextSectionRef = useRef<HTMLDivElement>(null);
   const scrollToNextSection = () => {
     if (nextSectionRef.current) {
@@ -90,10 +88,8 @@ const Ready = () => {
         <Header />
 
         <main className="flex-grow">
-          {/* SECTION 1: Hero */}
           <ReadyHeroSection onScrollToNextSection={scrollToNextSection} />
 
-          {/* SECTION 2: Context */}
           <section ref={nextSectionRef} className="py-24 bg-white">
             <div className="container-custom">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -104,12 +100,10 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeInRight}
                 >
-                  {/* HEADER */}
                   <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                     The media landscape has changed. Has your strategy?
                   </h2>
 
-                  {/* BULLET POINTS */}
                   <motion.ul className="space-y-6 mb-10" variants={staggerChildren}>
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
@@ -160,13 +154,11 @@ const Ready = () => {
                     </motion.li>
                   </motion.ul>
 
-                  {/* UPDATED SUBTEXT */}
                   <p className="text-lg text-gray-700 mb-8">
                     Voter behavior has changed. The systems people use to communicate, consume information, and make decisions have shifted in lasting ways. We use that understanding to design campaign strategies built on message clarity, audience targeting, and delivery methods that reflect how people engage now.
                   </p>
                 </motion.div>
 
-                {/* VIDEO: 1:1 aspect ratio YouTube Shorts embed (updated to requested video) */}
                 <motion.div
                   className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-square justify-center shadow-lg p-8"
                   initial="hidden"
@@ -193,7 +185,6 @@ const Ready = () => {
                       allowFullScreen
                     />
                   </div>
-                  {/* Small, italicized gray subtext */}
                   <p className="mt-4 text-sm italic text-gray-500 text-center w-full">
                     Hear it from our friends on The Wilderness, the media landscape has changed.
                   </p>
@@ -202,7 +193,6 @@ const Ready = () => {
             </div>
           </section>
 
-          {/* SECTION 3: What We Offer */}
           <section className="py-24 bg-[#F1F0FB]">
             <div className="container-custom">
               <motion.div 
@@ -344,7 +334,6 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* SECTION 4: How We Help */}
           <section className="py-24 bg-white">
             <div className="container-custom">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -355,17 +344,17 @@ const Ready = () => {
                   variants={fadeInRight}
                 >
                   <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                    Built by campaigners. Informed by real-world strategy.
+                    Built by campaigners. Informed by real world strategy.
                   </h2>
                   <div className="space-y-6 text-lg text-gray-700">
                     <p>
-                      We've worked as candidates, campaign managers, comms staff, field directors, and more. After a decade of experience and frustration with the same structural issues, we formed Veteran Campaigns.
+                      Our team has experience as candidates, campaign managers, communications staff, and field directors. We came together to solve the recurring challenges every election cycle and provide campaigns with the support we always wanted ourselves.
                     </p>
                     <p>
-                      We also bring in tools and thinking from adjacent industries. From influencer marketing to strategic consulting, our team combines campaign experience with private-sector speed.
+                      In addition to deep campaign backgrounds, our team brings in perspectives and tools from other industries, such as influencer marketing and strategic consulting. We blend public campaign experience with fast, effective methods borrowed from the private sector.
                     </p>
                     <p>
-                      With us, your communications strategy becomes one system: unified, trackable, and purpose built.
+                      With Veteran Campaigns, you get one unified communications system—everything you need in one place, with results you can measure.
                     </p>
                   </div>
                 </motion.div>
@@ -380,7 +369,7 @@ const Ready = () => {
                     <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
                     <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
                     <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
-                      You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look like it does?
+                      You do not organize, vote, or talk like it is 2008. So why would your campaign strategy look the same?
                     </blockquote>
                   </div>
                 </motion.div>
@@ -388,7 +377,6 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* SECTION 5: Integrating Mail + Digital */}
           <section className="py-24 bg-gradient-to-r from-blue-50 to-gray-50">
             <div className="container-custom">
               <motion.div 
@@ -399,10 +387,10 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                  It's not either-or. It's everything working together.
+                  It is not either or. It is everything working together.
                 </h2>
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                  Successful campaigns don't choose between direct mail and digital, they combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
+                  Successful campaigns do not choose between direct mail and digital. They combine them to multiply impact. Our campaigns create connected communication systems across every touchpoint.
                 </p>
               </motion.div>
               
@@ -490,7 +478,6 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* SECTION 6: Case Studies */}
           <section className="py-24 bg-gray-50">
             <div className="container-custom">
               <motion.div 
@@ -506,7 +493,6 @@ const Ready = () => {
               </motion.div>
               
               <div className="space-y-16">
-                {/* Case Study 1: Wounded Warrior Project */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -514,17 +500,14 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeIn}
                 >
-                  {/* MacBook Pro mockup with WWP image */}
                   <div className="flex items-center justify-center">
                     <div className="relative w-full max-w-lg">
-                      {/* MacBook Pro frame */}
                       <img
                         src="/lovable-uploads/1498050108023-c5249f4df085.jpg"
                         alt="MacBook Pro"
                         className="w-full h-auto rounded-2xl border shadow-lg"
                         style={{ background: "#222" }}
                       />
-                      {/* WWP Screenshot Overlay */}
                       <img
                         src="/lovable-uploads/92d624da-7828-4abd-897b-2eeac1a5b735.png"
                         alt="Wounded Warrior Project site"
@@ -547,7 +530,6 @@ const Ready = () => {
                   </div>
                 </motion.div>
                 
-                {/* Case Study 2: Sarah Keitt for State Rep */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -562,12 +544,11 @@ const Ready = () => {
                       </CardHeader>
                       <CardContent>
                         <p className="text-gray-700 leading-relaxed">
-                          Ran a fully integrated campaign combining digital, mail, video, and web strategy to deliver an upset victory by 14 votes in 2022!  Building on that momentum, we expanded support and secured a win by over 4 points in 2024.
+                          Ran a fully integrated campaign combining digital, mail, video, and web strategy to deliver an upset victory by 14 votes in 2022! Building on that momentum, we expanded support and secured a win by over 4 points in 2024.
                         </p>
                       </CardContent>
                     </Card>
                   </div>
-                  {/* Replace placeholder with Sarah Keitt image if available, else keep placeholder */}
                   <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center order-1 lg:order-2">
                     <img
                       src="/lovable-uploads/030a41ee-8d89-6c8989da5f5e.png"
@@ -579,7 +560,6 @@ const Ready = () => {
                   </div>
                 </motion.div>
                 
-                {/* Case Study 3: ANDD */}
                 <motion.div 
                   className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
                   initial="hidden"
@@ -587,7 +567,6 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeIn}
                 >
-                  {/* Show ANDD house deck image, fallback to placeholder if missing */}
                   <div className="bg-gray-300 rounded-xl overflow-hidden aspect-video flex items-center justify-center">
                     <img
                       src="/lovable-uploads/1113947f-0110-44b6-b131-619a3e1e1a55.png"
@@ -614,7 +593,6 @@ const Ready = () => {
             </div>
           </section>
           
-          {/* SECTION 7: CTA + Contact */}
           <section className="py-24 bg-white">
             <div className="container-custom">
               <motion.h2 
@@ -624,7 +602,10 @@ const Ready = () => {
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                We're ready to help your message break through
+                We're ready to help your message{" "}
+                <span className="bg-gradient-to-r from-primary-dark-blue to-primary-cyan-blue bg-clip-text text-transparent">
+                  break through
+                </span>
               </motion.h2>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -636,8 +617,12 @@ const Ready = () => {
                 >
                   <div className="space-y-10">
                     <div className="flex items-center space-x-6">
-                      <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center">
-                        <span className="text-gray-500">[Photo]</span>
+                      <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center overflow-hidden">
+                        <img
+                          src="/lovable-uploads/8a549a46-b634-4607-a8fd-f49a9a81c016.png"
+                          alt="Noah Frank headshot"
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold">Noah Frank</h3>
@@ -652,8 +637,12 @@ const Ready = () => {
                     </div>
                     
                     <div className="flex items-center space-x-6">
-                      <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center">
-                        <span className="text-gray-500">[Photo]</span>
+                      <div className="bg-gray-200 rounded-full w-24 h-24 flex items-center justify-center overflow-hidden">
+                        <img
+                          src="/lovable-uploads/f1b2771f-e653-45c2-a9bb-db04472d455a.png"
+                          alt="Andrew Gausepohl headshot"
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold">Andrew Gausepohl</h3>
@@ -677,7 +666,7 @@ const Ready = () => {
                   className="bg-primary-dark-blue/5 p-10 rounded-2xl"
                 >
                   <p className="text-gray-700 text-lg mb-10 leading-relaxed">
-                    Veteran Campaigns works with a limited number of campaigns each cycle so we can move fast and stay focused. If you're running in a competitive district and need a comms partner who understands how to win nowget in touch.
+                    Veteran Campaigns works with a limited number of campaigns each cycle so we can move fast and stay focused. If you're running in a competitive district and need a comms partner who understands how to win now, get in touch.
                   </p>
                   
                   <div className="flex flex-col space-y-4">
@@ -685,7 +674,7 @@ const Ready = () => {
                       className="flex items-center bg-white border border-gray-300 hover:bg-gray-50 text-primary-dark-blue shadow-sm rounded-lg"
                     >
                       <FileText className="mr-2 h-5 w-5" />
-                      Schedule a Call
+                      See more examples of our work
                     </Button>
                     
                     <Button 
