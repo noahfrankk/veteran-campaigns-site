@@ -347,47 +347,49 @@ const Ready = () => {
           
           <section className="py-24 bg-white">
             <div className="container-custom">
-              <motion.div 
-                className="text-left"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                  Built by campaigners. Informed by{" "}
-                  <span className="gradient-text">
-                    real world strategy.
-                  </span>
-                </h2>
-                <div className="space-y-6 text-lg text-gray-700">
-                  <p>
-                    Our team has experience as candidates, campaign managers, communications staff, and field directors. We came together to solve the recurring challenges every election cycle and provide campaigns with the support we always wanted ourselves.
-                  </p>
-                  <p>
-                    In addition to deep campaign backgrounds, our team brings in perspectives and tools from other industries, such as influencer marketing and strategic consulting. We blend public campaign experience with fast, effective methods borrowed from the private sector.
-                  </p>
-                  <p>
-                    With Veteran Campaigns, you get one unified communications system; everything you need is in one place, with results you can measure.
-                  </p>
-                </div>
-              </motion.div>
-              
-              <motion.div 
-                className="lg:sticky lg:top-24"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-              >
-                <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative h-full">
-                  <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                  <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                  <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
-                    You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
-                  </blockquote>
-                </div>
-              </motion.div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                <motion.div 
+                  className="text-left"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInRight}
+                >
+                  <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                    Built by campaigners. Informed by{" "}
+                    <span className="gradient-text">
+                      real world strategy.
+                    </span>
+                  </h2>
+                  <div className="space-y-6 text-lg text-gray-700">
+                    <p>
+                      Our team has experience as candidates, campaign managers, communications staff, and field directors. We came together to solve the recurring challenges every election cycle and provide campaigns with the support we always wanted ourselves.
+                    </p>
+                    <p>
+                      In addition to deep campaign backgrounds, our team brings in perspectives and tools from other industries, such as influencer marketing and strategic consulting. We blend public campaign experience with fast, effective methods borrowed from the private sector.
+                    </p>
+                    <p>
+                      With Veteran Campaigns, you get one unified communications system; everything you need is in one place, with results you can measure.
+                    </p>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="h-full flex items-center"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeInLeft}
+                >
+                  <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative h-full w-full">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                    <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                    <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
+                      You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
+                    </blockquote>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </section>
           
