@@ -19,15 +19,12 @@ const CorporateClientsSection: React.FC = () => {
           </h2>
         </div>
         
-        <a 
-          href="https://www.veteranmedia.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-block bg-white text-primary-dark-blue py-3 px-8 rounded-md font-semibold hover:bg-white/90 transition-colors shadow-sm text-lg"
-          aria-label="Learn more about Veteran Media"
+        <div 
+          className="inline-block bg-transparent text-white border border-white py-3 px-8 rounded-md font-semibold cursor-default select-none"
+          aria-label="Coming soon"
         >
-          Learn more
-        </a>
+          Coming Soon
+        </div>
       </div>
     </section>
   );
