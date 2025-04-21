@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -61,7 +60,50 @@ const PastWork: React.FC = () => {
     }
   }, []);
 
+  // Add new logos and intermix with the others in past clients
   const clientLogos = [
+    {
+      logo: "/lovable-uploads/4f8aacf5-765f-4fe4-af94-6ccc847c9657.png",
+      info: {
+        name: "FEED: Center for Food Equity + Economic Development",
+        details: "FEED (Food Equity + Economic Development). New Jersey and New York."
+      }
+    },
+    {
+      logo: "/lovable-uploads/3a93f749-731e-4f5e-bd68-d93456272e75.png",
+      info: {
+        name: "Connecticut Institute for Refugees and Immigrants",
+        details: "CIRI, Connecticut Institute for Refugees and Immigrants."
+      }
+    },
+    {
+      logo: "/lovable-uploads/4c7023d4-d4b5-4e4b-82e0-955d0b8d670e.png",
+      info: {
+        name: "ANDD: Action Network of Darien Democrats",
+        details: "Action Network of Darien Democrats. Darien, CT."
+      }
+    },
+    {
+      logo: "/lovable-uploads/897181c5-3f3c-4661-87b3-02d9f6a99ebd.png",
+      info: {
+        name: "Harry Rilling",
+        details: "Harry Rilling for Norwalk Mayor. Fairfield County, CT."
+      }
+    },
+    {
+      logo: "/lovable-uploads/d5c41e95-24f1-4867-87cb-172d160e8846.png",
+      info: {
+        name: "Wounded Warrior Project",
+        details: "Wounded Warrior Project - National advocacy campaign"
+      }
+    },
+    {
+      logo: "/lovable-uploads/a4cf1e40-a8fa-49c0-84ab-a0bdb6105cd0.png",
+      info: {
+        name: "United Way",
+        details: "United Way of Greater Fairfield County. Connecticut."
+      }
+    },
     {
       logo: "/lovable-uploads/027375c9-7928-4b48-9d29-6e4067c238f4.png",
       info: {
@@ -93,25 +135,11 @@ const PastWork: React.FC = () => {
       }
     },
     {
-      logo: "/lovable-uploads/d13494e4-5ac1-403d-aee9-93fa569b37a0.png",
-      info: {
-        name: "Kathy Caulfield",
-        details: "Kathy Caulfield for Probate Judge. Fairfield County."
-      }
-    },
-    {
-      logo: "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png", 
+      logo: "/lovable-uploads/cfec1c6f-f37c-4fcb-9c87-4c0752f8cafd.png",
       info: {
         name: "Nick Kapoor",
         details: "Kapoor for State Representative, CT HD-112. Fairfield County.",
         highlight: "Special election"
-      }
-    },
-    {
-      logo: "/lovable-uploads/fd0fd64b-8598-4f15-9d7c-dc72710dfd6d.png",
-      info: {
-        name: "Steinberg",
-        details: "Steinberg for State Representative, CT HD-136. Fairfield County."
       }
     },
     {
@@ -134,13 +162,6 @@ const PastWork: React.FC = () => {
       info: {
         name: "Volpe",
         details: "Volpe for State Representative, CT HD-134. Fairfield County."
-      }
-    },
-    {
-      logo: "/lovable-uploads/fa7fdb58-3ed8-48e2-a68e-216f7fdd42bc.png",
-      info: {
-        name: "Harriman-Stites",
-        details: "Harriman-Stites for State Representative, CT HD-106. Fairfield County."
       }
     },
     {
