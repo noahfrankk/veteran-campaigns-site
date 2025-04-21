@@ -30,14 +30,15 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
           backgroundImage: `url('/lovable-uploads/8f0eec87-7f23-4039-afa3-ba35e8953ce8.png')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          opacity: 1, // fully visible
         }}
         aria-hidden="true"
       />
       
-      {/* Light blue overlay with 85% opacity */}
+      {/* Light blue overlay with 50% opacity */}
       <div 
         className="absolute inset-0 w-full h-full bg-[#D3E4FD] z-10" 
-        style={{ opacity: 0.85 }} 
+        style={{ opacity: 0.5 }} 
       />
       
       <div className="container-custom relative z-20 py-20 flex flex-col items-center justify-center">
@@ -73,3 +74,4 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
 };
 
 export default ReadyHeroSection;
+
