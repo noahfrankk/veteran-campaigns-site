@@ -110,7 +110,7 @@ const Ready = () => {
 
                   {/* UPDATED bullet points: four total with requested formatting */}
                   <motion.ul className="space-y-6 mb-10" variants={staggerChildren}>
-                    {/* Added first two requested bullet points */}
+                    {/* New bullet point 1 */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -123,6 +123,7 @@ const Ready = () => {
                       </div>
                     </motion.li>
 
+                    {/* New bullet point 2 */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -135,27 +136,28 @@ const Ready = () => {
                       </div>
                     </motion.li>
 
-                    {/* Re-adding the original two bullet points */}
+                    {/* New bullet point 3 */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
                       </div>
                       <div>
-                        <span className="block text-xl font-bold text-gray-800">Over 85%</span>
+                        <span className="block text-xl font-bold text-gray-800">Only 20%</span>
                         <span className="text-gray-600">
-                          of US adults are regular <strong className="font-bold">YouTube</strong> users.
+                          of TV viewership now comes from broadcast.
                         </span>
                       </div>
                     </motion.li>
 
+                    {/* New bullet point 4 */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
                       </div>
                       <div>
-                        <span className="block text-xl font-bold text-gray-800">The majority of people 65+</span>
+                        <span className="block text-xl font-bold text-gray-800">Nearly 40%</span>
                         <span className="text-gray-600">
-                          use both <strong className="font-bold">YouTube</strong> and <strong className="font-bold">Facebook</strong> today.
+                          of all TV usage now comes from streaming.
                         </span>
                       </div>
                     </motion.li>
