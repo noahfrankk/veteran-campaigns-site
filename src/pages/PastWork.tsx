@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -63,20 +62,23 @@ const PastWork: React.FC = () => {
 
   // All 18 logos with client information
   const clientLogos = [
+    // 1. Connecticut Institute for Refugees and Immigrants
     {
       logo: "/lovable-uploads/4f8aacf5-765f-4fe4-af94-6ccc847c9657.png",
-      info: {
-        name: "FEED: Center for Food Equity + Economic Development",
-        details: "FEED (Food Equity + Economic Development). New Jersey and New York."
-      }
-    },
-    {
-      logo: "/lovable-uploads/3a93f749-731e-4f5e-bd68-d93456272e75.png",
       info: {
         name: "Connecticut Institute for Refugees and Immigrants",
         details: "CIRI, Connecticut Institute for Refugees and Immigrants."
       }
     },
+    // 2. Harry Rilling
+    {
+      logo: "/lovable-uploads/3a93f749-731e-4f5e-bd68-d93456272e75.png",
+      info: {
+        name: "Harry Rilling",
+        details: "Harry Rilling for Norwalk Mayor. Fairfield County."
+      }
+    },
+    // 3. Action Network of Darien Democrats (unchanged)
     {
       logo: "/lovable-uploads/4c7023d4-d4b5-4e4b-82e0-955d0b8d670e.png",
       info: {
@@ -84,25 +86,28 @@ const PastWork: React.FC = () => {
         details: "Action Network of Darien Democrats. Darien, CT."
       }
     },
-    {
-      logo: "/lovable-uploads/897181c5-3f3c-4661-87b3-02d9f6a99ebd.png",
-      info: {
-        name: "Harry Rilling",
-        details: "Harry Rilling for Norwalk Mayor. Fairfield County, CT."
-      }
-    },
-    {
-      logo: "/lovable-uploads/d5c41e95-24f1-4867-87cb-172d160e8846.png",
-      info: {
-        name: "Wounded Warrior Project",
-        details: "Wounded Warrior Project - National advocacy campaign"
-      }
-    },
+    // 4. United Way
     {
       logo: "/lovable-uploads/a4cf1e40-a8fa-49c0-84ab-a0bdb6105cd0.png",
       info: {
         name: "United Way",
-        details: "United Way of Greater Fairfield County. Connecticut."
+        details: "United Way of Greater Fairfield County."
+      }
+    },
+    // 5. Center for Food Equity and Economic Development
+    {
+      logo: "/lovable-uploads/d5c41e95-24f1-4867-87cb-172d160e8846.png",
+      info: {
+        name: "Center for Food Equity and Economic Development",
+        details: "Center for Food Equity and Economic Development. Fairfield County."
+      }
+    },
+    // 6. Wounded Warrior Project
+    {
+      logo: "/lovable-uploads/a4cf1e40-a8fa-49c0-84ab-a0bdb6105cd0.png",
+      info: {
+        name: "Wounded Warrior Project",
+        details: "Wounded Warrior Project. National advocacy campaign."
       }
     },
     {
