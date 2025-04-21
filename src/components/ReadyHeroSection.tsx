@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -50,25 +49,25 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
           viewport={{ once: true }}
           variants={fadeIn}
         >
-          {/* HERO HEADER - Smaller font size */}
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-5 leading-tight break-words">
+          {/* HERO HEADER - Increased font size */}
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-5 leading-tight break-words">
             We build smart, unified communications strategy to reach voters and{" "}
             <span className="gradient-text whitespace-nowrap">win.</span>
           </h1>
 
-          {/* Sub text - Smaller font size */}
-          <p className="text-xs md:text-sm mb-6 text-gray-800 leading-relaxed max-w-2xl mx-auto">
+          {/* Sub text - Slightly increased font size */}
+          <p className="text-sm md:text-base mb-6 text-gray-800 leading-relaxed max-w-2xl mx-auto">
             Most campaigns struggle to get their message to the right people, in the right format, at the right time. Veteran Campaigns connects causes to communities with strategy and creative built for how people actually communicate today, not just what worked last cycle.
           </p>
           
-          {/* Smaller button */}
+          {/* Slightly larger button */}
           <Button
             size="sm"
-            className="bg-primary-dark-blue text-white px-3 py-2 text-xs h-auto rounded-lg shadow-md hover:bg-primary-dark-blue/90 transition-all"
+            className="bg-primary-dark-blue text-white px-4 py-2 text-sm h-auto rounded-lg shadow-md hover:bg-primary-dark-blue/90 transition-all"
             onClick={onScrollToNextSection}
           >
             See how the landscape has changed
-            <ArrowRight className="ml-1 h-2 w-2" />
+            <ArrowRight className="ml-1 h-3 w-3" />
           </Button>
         </motion.div>
       </div>
