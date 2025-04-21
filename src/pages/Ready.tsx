@@ -347,7 +347,7 @@ const Ready = () => {
           
           <section className="py-24 bg-white">
             <div className="container-custom">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <motion.div 
                   className="text-left"
                   initial="hidden"
@@ -375,16 +375,16 @@ const Ready = () => {
                 </motion.div>
                 
                 <motion.div 
-                  className="h-full flex items-center"
+                  className="h-full flex items-center justify-center"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeInLeft}
                 >
-                  <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative h-full w-full">
-                    <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                    <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                    <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
+                  <div className="bg-primary-dark-blue text-white p-8 rounded-xl shadow-md relative max-w-sm mx-auto">
+                    <div className="absolute -top-3 -left-3 w-6 h-6 text-3xl text-primary-dark-blue">"</div>
+                    <div className="absolute -bottom-3 -right-3 w-6 h-6 text-3xl text-primary-dark-blue">"</div>
+                    <blockquote className="text-xl md:text-2xl font-medium italic leading-relaxed">
                       You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
                     </blockquote>
                   </div>
