@@ -108,35 +108,10 @@ const Ready = () => {
                     The media landscape has changed. Has your strategy?
                   </h2>
 
-                  {/* UPDATED bullet points: four total with requested formatting */}
+                  {/* UPDATED bullet points: four total with requested formatting, reordered */}
                   <motion.ul className="space-y-6 mb-10" variants={staggerChildren}>
-                    {/* New bullet point 1 */}
-                    <motion.li className="flex items-start" variants={fadeIn}>
-                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
-                        <Check className="h-5 w-5 text-primary-dark-blue" />
-                      </div>
-                      <div>
-                        <span className="block text-xl font-bold text-gray-800">Over 85%</span>
-                        <span className="text-gray-600">
-                          of US adults are regular <strong className="font-bold">YouTube</strong> users.
-                        </span>
-                      </div>
-                    </motion.li>
 
-                    {/* New bullet point 2 */}
-                    <motion.li className="flex items-start" variants={fadeIn}>
-                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
-                        <Check className="h-5 w-5 text-primary-dark-blue" />
-                      </div>
-                      <div>
-                        <span className="block text-xl font-bold text-gray-800">The majority of people 65+</span>
-                        <span className="text-gray-600">
-                          use both <strong className="font-bold">YouTube</strong> and <strong className="font-bold">Facebook</strong> today.
-                        </span>
-                      </div>
-                    </motion.li>
-
-                    {/* New bullet point 3 */}
+                    {/* New bullet point 1 (was previously 3rd) */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -149,7 +124,7 @@ const Ready = () => {
                       </div>
                     </motion.li>
 
-                    {/* New bullet point 4 */}
+                    {/* New bullet point 2 (was previously 4th) */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -161,6 +136,33 @@ const Ready = () => {
                         </span>
                       </div>
                     </motion.li>
+
+                    {/* New bullet point 3 (was previously 1st) */}
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">Over 85%</span>
+                        <span className="text-gray-600">
+                          of US adults are regular <strong className="font-bold">YouTube</strong> users.
+                        </span>
+                      </div>
+                    </motion.li>
+
+                    {/* New bullet point 4 (was previously 2nd) */}
+                    <motion.li className="flex items-start" variants={fadeIn}>
+                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
+                        <Check className="h-5 w-5 text-primary-dark-blue" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-gray-800">The majority of people 65+</span>
+                        <span className="text-gray-600">
+                          use both <strong className="font-bold">YouTube</strong> and <strong className="font-bold">Facebook</strong> today.
+                        </span>
+                      </div>
+                    </motion.li>
+
                   </motion.ul>
 
                   <p className="text-lg text-gray-700 mb-8">
