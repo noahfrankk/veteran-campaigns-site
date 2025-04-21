@@ -22,7 +22,7 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
   };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden w-full">
+    <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden w-full">
       {/* Background image */}
       <div 
         className="absolute inset-0 w-full h-full"
@@ -42,7 +42,7 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
       />
       
       {/* Content */}
-      <div className="container-custom relative z-10 py-20 flex flex-col items-center justify-center">
+      <div className="container-custom relative z-10 py-12 flex flex-col items-center justify-center">
         <motion.div
           className="w-full max-w-[38rem] md:max-w-[42rem] mx-auto text-center"
           initial="hidden"

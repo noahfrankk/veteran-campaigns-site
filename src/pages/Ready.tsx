@@ -93,7 +93,7 @@ const Ready = () => {
       <SEO
         title="Campaign Communications Strategy | Veteran Campaigns"
         description="Veteran Campaigns connects causes to communities, partnering with campaigns to deliver effective communication across all channels."
-        canonical="/ready"
+        canonical="/strategy"
       />
       <div className="flex flex-col min-h-screen">
         <Header />
@@ -101,7 +101,7 @@ const Ready = () => {
         <main className="flex-grow">
           <ReadyHeroSection onScrollToNextSection={scrollToNextSection} />
 
-          <section className="py-24 bg-white">
+          <section className="py-24 bg-white" ref={nextSectionRef}>
             <div className="container-custom">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <motion.div
@@ -354,7 +354,7 @@ const Ready = () => {
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                <h2 className="text-4xl md:text-5xl font-bold mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
                   Built by campaigners. Informed by{" "}
                   <span className="gradient-text">
                     real world strategy.
@@ -373,12 +373,19 @@ const Ready = () => {
                 </div>
               </motion.div>
               
-              <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
-                <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
-                <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
-                  You do not organize, vote, or talk like it is 2008. So why would your campaign strategy look the same?
-                </blockquote>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="lg:col-span-1 order-2 lg:order-1">
+                  {/* Content column - leave empty for layout */}
+                </div>
+                <div className="lg:col-span-1 order-1 lg:order-2">
+                  <div className="bg-primary-dark-blue text-white p-10 rounded-xl shadow-xl relative">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                    <div className="absolute -bottom-3 -right-3 w-8 h-8 text-4xl text-primary-dark-blue">"</div>
+                    <blockquote className="text-2xl md:text-3xl font-medium italic leading-relaxed">
+                      You don't organize, vote, or talk like it's 2008. So why would your campaign strategy look the same?
+                    </blockquote>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -393,7 +400,7 @@ const Ready = () => {
                 variants={fadeIn}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                  <span className="text-gray-700">It's not either or. It's everything </span>
+                  <span className="text-black">It's not either or. It's everything </span>
                   <span className="gradient-text">working together.</span>
                 </h2>
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">

@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
   type CarouselApi
 } from "@/components/ui/carousel";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Updated with newly uploaded hero images
 const images = [
@@ -23,37 +24,45 @@ const HeroImageSlider: React.FC = () => {
   useEffect(() => {
     if (!api) return;
 
-    // Auto-scroll interval (5 seconds)
+    // Auto-scroll interval (8 seconds - slowed down from 5)
     const interval = setInterval(() => {
       api.scrollNext();
-    }, 5000);
+    }, 8000);
 
     // Clear the interval when component unmounts
     return () => clearInterval(interval);
   }, [api]);
 
   return (
-    <Carousel className="w-full max-w-[175%]" setApi={setApi}>
-      <CarouselContent>
-        {images.map((image, index) => (
-          <CarouselItem key={index}>
-            <div className="aspect-square relative rounded-lg overflow-hidden">
-              <div className="p-1">
-                <div className="rounded-lg overflow-hidden aspect-square flex items-center justify-center p-4">
-                  <img 
-                    src={image} 
-                    alt={`Campaign Example ${index + 1}`} 
-                    className="w-full h-full object-contain transition-all duration-300 scale-[1.4]" // Reduced from 1.75 to 1.4 (20% smaller)
-                  />
+    <div className="relative w-full max-w-[175%]">
+      {/* Add fade overlay on left */}
+      <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
+      
+      <Carousel className="w-full" setApi={setApi}>
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index}>
+              <div className="aspect-square relative rounded-lg overflow-hidden">
+                <div className="p-1">
+                  <div className="rounded-lg overflow-hidden aspect-square flex items-center justify-center p-4">
+                    <img 
+                      src={image} 
+                      alt={`Campaign Example ${index + 1}`} 
+                      className="w-full h-full object-contain transition-all duration-300 scale-[1.4]"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="left-2" />
-      <CarouselNext className="right-2" />
-    </Carousel>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-2 z-20" />
+        <CarouselNext className="right-2" />
+      </Carousel>
+      
+      {/* Add fade overlay on right */}
+      <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent"></div>
+    </div>
   );
 };
 
