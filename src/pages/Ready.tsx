@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/card";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import ReadyHeroSection from "../components/ReadyHeroSection";
-import { useNavigate } from "react-router-dom"; // Needed for navigation
+import { useNavigate } from "react-router-dom";
 
 const Ready = () => {
   const fadeIn = {
@@ -80,7 +80,6 @@ const Ready = () => {
 
   const navigate = useNavigate();
 
-  // Utility function to scroll to contact form
   const handleContactClick = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -518,7 +517,7 @@ const Ready = () => {
                 >
                   <div className="flex items-center justify-center">
                     <div className="relative w-full max-w-lg">
-                      {/* MacBook Pro with WWP graphic */}
+                      {/* MacBook Pro with WWP site inside */}
                       <img
                         src="/lovable-uploads/1498050108023-c5249f4df085.jpg"
                         alt="MacBook Pro"
@@ -612,6 +611,7 @@ const Ready = () => {
             </div>
           </section>
           
+          {/* Final call to action section */}
           <section className="py-24 bg-white">
             <div className="container-custom">
               <motion.h2 
@@ -621,10 +621,11 @@ const Ready = () => {
                 viewport={{ once: true }}
                 variants={fadeIn}
               >
-                We're ready to help your message{" "}
+                Ready to help your message{" "}
                 <span className="bg-gradient-to-r from-primary-dark-blue to-primary-cyan-blue bg-clip-text text-transparent">
                   break through
                 </span>
+                .
               </motion.h2>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
