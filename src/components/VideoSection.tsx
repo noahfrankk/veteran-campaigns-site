@@ -35,9 +35,17 @@ const VideoSection: React.FC = () => {
           <div className="order-1 lg:order-2">
             <div 
               id="intro-video"
-              className="w-full aspect-video bg-[#f5f5f5] rounded-lg flex items-center justify-center"
+              className="w-full aspect-video bg-[#f5f5f5] rounded-lg flex items-center justify-center overflow-hidden"
             >
-              <p className="text-lg text-gray-500">Intro Video Coming Soon</p>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/C3mOVWNJHa8"
+                title="Intro Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
             <p className="text-sm text-gray-500 mt-3 italic">Our philosophy on the state of campaigns today.</p>
           </div>
