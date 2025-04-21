@@ -103,15 +103,13 @@ const Ready = () => {
                   viewport={{ once: true }}
                   variants={fadeInRight}
                 >
-                  {/* UPDATED header */}
+                  {/* HEADER */}
                   <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                     The media landscape has changed. Has your strategy?
                   </h2>
 
-                  {/* UPDATED bullet points: four total with requested formatting, reordered */}
+                  {/* BULLET POINTS */}
                   <motion.ul className="space-y-6 mb-10" variants={staggerChildren}>
-
-                    {/* New bullet point 1 (was previously 3rd) */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -124,7 +122,6 @@ const Ready = () => {
                       </div>
                     </motion.li>
 
-                    {/* New bullet point 2 (was previously 4th) */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -137,7 +134,6 @@ const Ready = () => {
                       </div>
                     </motion.li>
 
-                    {/* New bullet point 3 (was previously 1st) */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -150,7 +146,6 @@ const Ready = () => {
                       </div>
                     </motion.li>
 
-                    {/* New bullet point 4 (was previously 2nd) */}
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
@@ -162,11 +157,11 @@ const Ready = () => {
                         </span>
                       </div>
                     </motion.li>
-
                   </motion.ul>
 
+                  {/* UPDATED SUBTEXT */}
                   <p className="text-lg text-gray-700 mb-8">
-                    Your message is only as effective as where and how it's delivered. We help you cut through outdated tactics and reach voters where they are.
+                    Voter behavior has changed. The systems people use to communicate, consume information, and make decisions have shifted in lasting ways. We use that understanding to design campaign strategies built on message clarity, audience targeting, and delivery methods that reflect how people engage now.
                   </p>
                 </motion.div>
 
