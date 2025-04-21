@@ -23,25 +23,25 @@ const ReadyHeroSection: React.FC<ReadyHeroSectionProps> = ({
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden w-full">
-      {/* Background map image */}
-      <div
-        className="absolute inset-0 w-full h-full z-0"
-        style={{
-          backgroundImage: `url('/lovable-uploads/8f0eec87-7f23-4039-afa3-ba35e8953ce8.png')`,
+      {/* Background map image - using inline style for background image */}
+      <div 
+        className="absolute inset-0 w-full h-full" 
+        style={{ 
+          backgroundImage: "url('/lovable-uploads/8f0eec87-7f23-4039-afa3-ba35e8953ce8.png')",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          zIndex: 0
         }}
-        aria-hidden="true"
       />
       
       {/* Light blue overlay with 50% opacity */}
       <div 
-        className="absolute inset-0 w-full h-full bg-[#D3E4FD] z-10" 
-        style={{ opacity: 0.5 }} 
+        className="absolute inset-0 w-full h-full bg-[#D3E4FD]" 
+        style={{ opacity: 0.5, zIndex: 1 }} 
       />
       
-      <div className="container-custom relative z-20 py-20 flex flex-col items-center justify-center">
+      <div className="container-custom relative py-20 flex flex-col items-center justify-center" style={{ zIndex: 2 }}>
         <motion.div
           className="w-full max-w-[38rem] md:max-w-[42rem] mx-auto text-center"
           initial="hidden"
