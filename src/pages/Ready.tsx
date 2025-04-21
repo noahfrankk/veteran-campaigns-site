@@ -80,14 +80,14 @@ const Ready = () => {
 
   return (
     <>
-      <SEO 
-        title="Campaign Communications Strategy | Veteran Campaigns" 
+      <SEO
+        title="Campaign Communications Strategy | Veteran Campaigns"
         description="Veteran Campaigns connects causes to communities, partnering with campaigns to deliver effective communication across all channels."
         canonical="/ready"
       />
       <div className="flex flex-col min-h-screen">
         <Header />
-        
+
         <main className="flex-grow">
           {/* SECTION 1: Hero */}
           <ReadyHeroSection onScrollToNextSection={scrollToNextSection} />
@@ -96,7 +96,7 @@ const Ready = () => {
           <section ref={nextSectionRef} className="py-24 bg-white">
             <div className="container-custom">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <motion.div 
+                <motion.div
                   className="flex flex-col justify-center"
                   initial="hidden"
                   whileInView="visible"
@@ -107,69 +107,41 @@ const Ready = () => {
                   <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
                     The media landscape has changed. Has your strategy?
                   </h2>
-                  
+
                   {/* UPDATED bullet points */}
-                  <motion.ul 
-                    className="space-y-6 mb-10"
-                    variants={staggerChildren}
-                  >
-                    {/* 1. Broadcast */}
-                    <motion.li className="flex items-start" variants={fadeIn}>
-                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
-                        <Check className="h-5 w-5 text-primary-dark-blue" />
-                      </div>
-                      <div>
-                        <span className="block text-xl font-bold text-gray-800">Only 20%</span>
-                        <span className="text-gray-600">of TV viewership now comes from broadcast.</span>
-                      </div>
-                    </motion.li>
-                    {/* 2. Streaming */}
-                    <motion.li className="flex items-start" variants={fadeIn}>
-                      <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
-                        <Check className="h-5 w-5 text-primary-dark-blue" />
-                      </div>
-                      <div>
-                        <span className="block text-xl font-bold text-gray-800">Streaming</span>
-                        <span className="text-gray-600">now represents <strong>nearly 40%</strong> of all TV usage.</span>
-                      </div>
-                    </motion.li>
-                    {/* 3. YouTube usage */}
+                  <motion.ul className="space-y-6 mb-10" variants={staggerChildren}>
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
                       </div>
                       <div>
                         <span className="block text-xl font-bold text-gray-800">Over 85%</span>
-                        <span className="text-gray-600">of US Adults use YouTube.</span>
+                        <span className="text-gray-600">
+                          of US adults are regular <strong className="font-bold">YouTube</strong> users.
+                        </span>
                       </div>
                     </motion.li>
-                    {/* 4. People 65+ */}
+
                     <motion.li className="flex items-start" variants={fadeIn}>
                       <div className="bg-primary-dark-blue/10 p-2 rounded-full mr-4">
                         <Check className="h-5 w-5 text-primary-dark-blue" />
                       </div>
                       <div>
                         <span className="block text-xl font-bold text-gray-800">The majority of people 65+</span>
-                        <span className="text-gray-600">use both YouTube and Facebook.</span>
+                        <span className="text-gray-600">
+                          use both <strong className="font-bold">YouTube</strong> and <strong className="font-bold">Facebook</strong> today.
+                        </span>
                       </div>
                     </motion.li>
                   </motion.ul>
-                  
+
                   <p className="text-lg text-gray-700 mb-8">
                     Your message is only as effective as where and how it's delivered. We help you cut through outdated tactics and reach voters where they are.
                   </p>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="text-primary-dark-blue border-primary-dark-blue/30 hover:bg-primary-dark-blue/5 w-fit"
-                  >
-                    Watch the video
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
                 </motion.div>
 
                 {/* VIDEO: 1:1 aspect ratio YouTube Shorts embed */}
-                <motion.div 
+                <motion.div
                   className="relative flex flex-col items-center bg-gray-200 rounded-xl aspect-square justify-center shadow-lg p-8"
                   initial="hidden"
                   whileInView="visible"
