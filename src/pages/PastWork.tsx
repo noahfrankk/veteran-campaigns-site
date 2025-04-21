@@ -86,9 +86,9 @@ const PastWork: React.FC = () => {
         details: "Action Network of Darien Democrats. Darien, CT."
       }
     },
-    // 4. United Way
+    // 4. United Way (updated logo)
     {
-      logo: "/lovable-uploads/a4cf1e40-a8fa-49c0-84ab-a0bdb6105cd0.png",
+      logo: "/lovable-uploads/4081bbc5-b0e1-4aad-a282-44a49a111256.png",
       info: {
         name: "United Way",
         details: "United Way of Greater Fairfield County."
