@@ -52,7 +52,7 @@ const MarqueeSection: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Client ${index + 1}`}
-                  className="max-w-[180%] max-h-[180%] object-contain"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             ))}
@@ -65,7 +65,7 @@ const MarqueeSection: React.FC = () => {
                 <img 
                   src={logo} 
                   alt={`Client ${index + 1}`}
-                  className="max-w-[180%] max-h-[180%] object-contain"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             ))}
@@ -87,4 +87,3 @@ const MarqueeSection: React.FC = () => {
 };
 
 export default MarqueeSection;
-
