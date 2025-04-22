@@ -234,19 +234,19 @@ const Ready = () => {
                       transition={{ duration: 0.3 }}
                     >
                       <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <Users className="h-8 w-8 text-primary-dark-blue" />
+                        <Tv className="h-8 w-8 text-primary-dark-blue" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">Advisory Services</h3>
+                      <h3 className="text-2xl font-bold mb-4">Digital Advertising</h3>
                       <p className="text-gray-600">
-                        We help you plan, message, and adjust in real time.
+                        We provide end-to-end digital campaign services including strategy, production, and targeted distribution for websites, display and video ads, search and social media, OTT and CTV platforms, programmatic advertising, and voter file-matched outreach.
                       </p>
                     </motion.div>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-80 p-6">
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Advisory Services</h4>
+                      <h4 className="text-lg font-semibold">Digital Advertising</h4>
                       <p className="text-sm text-gray-600">
-                        We act as your comms partner in the room helping shape what to say, how to say it, and where it needs to land. That includes planning, messaging, and alignment across functions.
+                        We provide end-to-end digital campaign services including strategy, production, and targeted distribution for websites, display and video ads, search and social media, OTT and CTV platforms, programmatic advertising, and voter file-matched outreach.
                       </p>
                     </div>
                   </HoverCardContent>
@@ -264,19 +264,19 @@ const Ready = () => {
                       transition={{ duration: 0.3, delay: 0.1 }}
                     >
                       <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <Tv className="h-8 w-8 text-primary-dark-blue" />
+                        <FileText className="h-8 w-8 text-primary-dark-blue" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">Digital Advertising</h3>
+                      <h3 className="text-2xl font-bold mb-4">Direct Mail</h3>
                       <p className="text-gray-600">
-                        Full funnel strategy, creative, and execution from search to CTV.
+                        We offer strategic, targeted direct mail programs from design to delivery that integrate seamlessly with your broader campaign. Our team ensures your mail reaches the right voters efficiently, maximizing impact while staying mindful of budget and message alignment.
                       </p>
                     </motion.div>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-80 p-6">
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Digital Advertising</h4>
+                      <h4 className="text-lg font-semibold">Direct Mail</h4>
                       <p className="text-sm text-gray-600">
-                        We build digital programs that cut through noise and meet people where they already are. From short form to search, we help you plan, produce, and place the content that drives engagement.
+                        We offer strategic, targeted direct mail programs from design to delivery that integrate seamlessly with your broader campaign. Our team ensures your mail reaches the right voters efficiently, maximizing impact while staying mindful of budget and message alignment.
                       </p>
                     </div>
                   </HoverCardContent>
@@ -294,19 +294,19 @@ const Ready = () => {
                       transition={{ duration: 0.3, delay: 0.2 }}
                     >
                       <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <FileText className="h-8 w-8 text-primary-dark-blue" />
+                        <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">Direct Mail</h3>
+                      <h3 className="text-2xl font-bold mb-4">Printed Goods</h3>
                       <p className="text-gray-600">
-                        Targeted, persuasive, and aligned with your broader message.
+                        We design, print, and deliver everything your campaign needs, from your first stickers and lawn signs to your final walk card. Our team handles production and logistics so you can stay focused on winning while we bring your brand to life in the field.
                       </p>
                     </motion.div>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-80 p-6">
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Direct Mail</h4>
+                      <h4 className="text-lg font-semibold">Printed Goods</h4>
                       <p className="text-sm text-gray-600">
-                        Mail should do more than check a box. Ours is designed to persuade, reinforce, and match your campaigns tone and timeline. Clean visuals, sharp writing, clear purpose.
+                        We design, print, and deliver everything your campaign needs, from your first stickers and lawn signs to your final walk card. Our team handles production and logistics so you can stay focused on winning while we bring your brand to life in the field.
                       </p>
                     </div>
                   </HoverCardContent>
@@ -324,19 +324,19 @@ const Ready = () => {
                       transition={{ duration: 0.3, delay: 0.3 }}
                     >
                       <div className="bg-primary-dark-blue/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <BarChart3 className="h-8 w-8 text-primary-dark-blue" />
+                        <Users className="h-8 w-8 text-primary-dark-blue" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">Printed Goods</h3>
+                      <h3 className="text-2xl font-bold mb-4">Advisory Services</h3>
                       <p className="text-gray-600">
-                        From signs to canvasser kits, we deliver materials that make an impact.
+                        We advise campaigns on building effective communications strategies, setting up core infrastructure, and aligning messaging across channels. Our strategic support integrates with your field, organizing, and political operations to ensure every part of your campaign works together.
                       </p>
                     </motion.div>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-80 p-6">
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold">Printed Goods</h4>
+                      <h4 className="text-lg font-semibold">Advisory Services</h4>
                       <p className="text-sm text-gray-600">
-                        From field materials to event signage, your print pieces should reflect the identity of your campaign. We design and deliver what your team needs in the format and style that works.
+                        We advise campaigns on building effective communications strategies, setting up core infrastructure, and aligning messaging across channels. Our strategic support integrates with your field, organizing, and political operations to ensure every part of your campaign works together.
                       </p>
                     </div>
                   </HoverCardContent>
