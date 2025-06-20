@@ -38,9 +38,14 @@ const Footer: React.FC = () => {
             >
               Get In Touch
             </button>
-            <span className="text-gray-200">
+            <a 
+              href="https://veteranmedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-cyan-blue text-gray-200"
+            >
               Veteran Media
-            </span>
+            </a>
             <Link to="/privacy-policy" className="hover:text-primary-cyan-blue text-gray-200">
               Privacy Policy
             </Link>
